@@ -234,7 +234,7 @@ export default function ProjectsPage() {
           <div>
             <h2 className="text-2xl font-bold mb-4">Have a Project Idea?</h2>
             <p className="mb-6">
-              We're always interested in exploring new collaborations and
+              We&apos;re always interested in exploring new collaborations and
               research opportunities. Contact us to discuss potential projects.
             </p>
             <a

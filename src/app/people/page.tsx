@@ -6,7 +6,6 @@ export default function PeoplePage() {
   const faculty = PEOPLE.filter((p) => p.category === "faculty");
   const phdStudents = PEOPLE.filter((p) => p.category === "phd");
   const msStudents = PEOPLE.filter((p) => p.category === "ms");
-  const alumni = PEOPLE.filter((p) => p.category === "alumni");
 
   return (
     <section className="py-16 bg-gradient-to-b from-blue-50 to-white">

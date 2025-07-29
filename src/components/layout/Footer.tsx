@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <div className="relative w-62 h-20">
+              <div className="relative w-60 h-14">
                 <Image fill src="/logo.avif" alt="CVIT Lab" />
               </div>
             </div>

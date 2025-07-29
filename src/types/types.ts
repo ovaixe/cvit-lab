@@ -14,7 +14,8 @@ export type Person = {
   name: string;
   role: string;
   email: string;
-  category: "faculty" | "phd" | "ms" | "alumni";
+  category: "director" | "faculty" | "phd" | "ms" | "alumni";
+  description?: string;
 };
 
 export type Publication = {

@@ -2,6 +2,7 @@ import PeopleGrid from "@/components/people/PeopleGrid";
 import { PEOPLE } from "@/utils/data";
 
 export default function PeoplePage() {
+  const director = PEOPLE.filter((p) => p.category === "director");
   const faculty = PEOPLE.filter((p) => p.category === "faculty");
   const phdStudents = PEOPLE.filter((p) => p.category === "phd");
   const msStudents = PEOPLE.filter((p) => p.category === "ms");
@@ -17,17 +18,17 @@ export default function PeoplePage() {
           </p>
         </div>
 
+        <PeopleGrid title="Director" people={director} />
         <PeopleGrid title="Faculty" people={faculty} />
         <PeopleGrid title="PhD Students" people={phdStudents} />
         <PeopleGrid title="MS Students" people={msStudents} />
-        <PeopleGrid title="Alumni" people={alumni} />
 
         <div className="mt-16 bg-white rounded-xl shadow-lg p-8">
           <h2 className="text-2xl font-bold mb-4">Join Our Team</h2>
           <p className="mb-4">
-            We&apos;re always looking for talented researchers to join our lab. If
-            you&apos;re passionate about computer vision and machine learning,
-            consider applying to our program.
+            We&apos;re always looking for talented researchers to join our lab.
+            If you&apos;re passionate about computer vision and machine
+            learning, consider applying to our program.
           </p>
           <a
             href="/contact"

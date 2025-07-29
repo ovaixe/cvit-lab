@@ -1,5 +1,6 @@
 import ResearchCard from "@/components/research/ResearchCard";
 import { RESEARCH_AREAS } from "@/utils/data";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -9,32 +10,62 @@ export default function AboutPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             About CVIT Lab
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Advancing research in visual information technology since 1999
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-2">
+            With the advancement of modern technology, Artificial Intelligence
+            has become a vital part in every major industry. Processing and
+            dealing with a huge amount of data in a short amount of time can be
+            done with AI technology, which is an incredible feat that we could
+            not imagine decades ago.
+          </p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-2">
+            By learning how we solve problems, programs and machines can do
+            tasks without constant monitoring or adjustment. For example, we see
+            the world through our eyes. With our complex optic nerve, our brain
+            can obtain the lights and visualize the world so we know what we are
+            looking at.
+          </p>
+
+          <p className="text-primary font-bold text-xl max-w-3xl mx-auto">
+            But does computer or machine view the world the same as we do?{" "}
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96" />
+          <div className="w-full h-96 relative">
+            <Image
+              fill
+              src={"/images/about.avif"}
+              alt="robot"
+              className="object-contain"
+            />
           </div>
+
           <div>
             <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
             <p className="text-gray-700 mb-4">
-              The Centre for Visual Information Technology (CVIT) is a premier
-              research center at IIIT Hyderabad dedicated to advancing the field
-              of computer vision, image processing, machine learning, and
-              pattern recognition.
+              We can usually describe what is in a picture or possibly the story
+              behind it. But to a computer, every image can be interpreted as
+              number of pixels and RGB values. Despite these data, it does not
+              know what the picture contains since computer cannot comprehend
+              the arrangement of these value mean. Thus, if we manage to train
+              computer to learn how we interpret images, it can help us with
+              tasks where identifying features in images is vital. Thus,
+              Computer Vision is born.
             </p>
             <p className="text-gray-700 mb-4">
-              Our mission is to conduct cutting-edge research that addresses
-              fundamental challenges in visual information processing while
-              developing practical applications that benefit society.
+              Basically, Computer Vision deals with how computers understand and
+              do tasks from images and videos. It should be noted that Computer
+              Vision is not considered a branch under AI. However, they are
+              closely related to each other since Computer Vision involves
+              multiple AI-related techniques. We know that computer do not get
+              tired or bored for doing tasks for weeks and months (if properly
+              maintained), and can detect the slightest difference, just like
+              the color #b4fac8 and #b4fac9.
             </p>
-            <p className="text-gray-700">
-              Founded in 1999, CVIT has grown to become one of India&apos;s
-              leading research centers in computer vision, with collaborations
-              spanning academia and industry worldwide.
+
+            <p className="text-primary font-bold">
+              But in order to let computer understands our goal, it has to learn
+              how we interpret images.
             </p>
           </div>
         </div>

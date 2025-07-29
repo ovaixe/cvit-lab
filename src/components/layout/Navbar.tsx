@@ -18,7 +18,7 @@ export default function Navbar() {
               className="flex-shrink-0 flex items-center"
               onClick={() => setIsOpen(false)}
             >
-              <div className="relative w-50 h-16">
+              <div className="relative w-40 h-10 md:w-60 md:h-14">
                 <Image fill src="/logo.avif" alt="CVIT Lab" />
               </div>
             </Link>

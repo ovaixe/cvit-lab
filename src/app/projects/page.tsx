@@ -137,15 +137,50 @@ export default function ProjectsPage() {
   // Featured projects
   const featuredProjects = [
     {
-      id: 501,
-      title: "Generative Models for Image Synthesis",
+      id: 1,
+      title:
+        "Ministry of Science and Technology (MOST) Projects (PI) Industry-academia Collaboration Projects",
+      data: [
+        "The research of lightweight deep learning modeling with lifelong learning capability and security robustness, NSTC 110-2221-E-008 -104-MY3, 2011/08/01 ~ 2024/07/31",
+        "Few-shot learning for fruit ripeness classification and prediction, Proactive Magic Add-on Project, MOST 107-2221-E-155-048-MY3, 2018/08/01～2021/07/31.",
+        "The Research of Automatic Surface Defect Detection for Industrial Applications Based on Deep Learning, MOST 107-2221-E-155-048-MY3, 2018/08/01～2021/07/31.",
+        "Development of deep learning framework for plant disease detection and classification, Proactive Magic Add-on Project, MOST 107-2221-E-155-048-MY3, 2018/08/01～2021/07/31.",
+        "Head-Shoulder Detection Based on Template Matching and Deep Learning, MOST 106-2221-E-468-020, 2017/08/01～2018/07/31.",
+        "Rain and Haze Removal, and Vehicle and Human Detection based on NMF, MOST 105-2221-E-468-008, 2016/08/01～2017/07/31.",
+        "Software Development in 3D Modeling and Manipulation for Precisely Clinical Applications, MOST 104-2218-E-468-001, 2015/08/01～2018/10/31.",
+        "Privacy and Digital Rights Protection for Multimedia Streaming, MOST 103-2221-E-468-007-MY2, 2014/08/01～2016/07/31.",
+        "Video Surveillance in Encrypted Cloud Environments, NSC 102-2918-I-468-002, 2013/08/01～2014/07/31.",
+        "The Design of High Fidelity of Foreground Segmentation and New Background Modeling, NSC 102-2221-E-468 -017, 2013/08/01～2014/07/31.",
+        "Robust Moving Objects Detection for Video Surveillance, NSC 101-2221-E-468 -021, 2012/08/01～2013/07/31.",
+        "Compressive Sensing and Its Applications to Multimedia in Cloud Computing Environments, NSC 100-2221-E-468 -021, 2011/08/01～2012/07/31.",
+        "Privacy-Preserving Video Surveillance and Image Retrieval, NSC 99-2221-E-468 -023, 2010/08/01～2011/07/31.",
+        "Human Appearance Identification Based on a Robust Multi-Camera Surveillance System, NSC 99-2218-E-468-005, 2010/02/01～2010/10/31.",
+      ],
       description:
         "Developing advanced GAN architectures for high-fidelity image generation and manipulation.",
       technologies: ["StyleGAN", "Diffusion Models", "Neural Rendering"],
     },
     {
-      id: 502,
-      title: "Autonomous Navigation System",
+      id: 2,
+      title: "Industry-academia Collaboration Projects",
+      data: [
+        "Development of all-purpose character recognition system for edge computing device, 2020/06～2021/03, PI.",
+        "Asynchronous continuous human tracking method, 2020/08～2020/12, PI.",
+        "Development of all-purpose steel coil serial number identification technology, 2019/10～2020/07, PI.",
+        "Reinforcement and system integration of ID 3D image recognition on billet’s surface, 2019/01～2019/10, PI.",
+        "Development of new technology for defect features extraction on surface of steel products, 2018/04～2018/11, PI.",
+        "Development of deep learning technology for detecting defect features extraction on surface of steel products, 2017/09～2018/08, PI.",
+        "Development of auto-segmentation system of lesson recordings in multiple cameras, 2017/02～2018/01, PI.",
+        "Development of calibration and coordinate correspondence of laser- and light-scanned depth image, 2016/10～2016/12, PI.",
+        "Building of tire and steel surface defects image database, 2016/10～2016/12, PI.",
+        "Building and optimization of automatic 3D spine model, 2016/10～2017/09, PI.",
+        "Research on the benefits and expansibility of Health Check Cloud, 2016/08～2016/11, PI.",
+        "Development of smart lesson recording system, 2016/02～2017/01, PI.",
+        "Rehabilitation Cloud Project, 2015/04～2016/07, Co-PI.",
+        "Innovative information and communication software talent promotion project, 2015/02～2016/01, Co-PI.",
+        "Application of non-negative matrix subdivision on object image classification technology, 2013/07～2013/12, PI.",
+        "Talent cultivation and internship project, 2013/02～2016/01, PI.",
+      ],
       description:
         "Vision-based navigation system for autonomous vehicles in complex urban environments.",
       technologies: ["SLAM", "Depth Estimation", "Path Planning"],
@@ -160,7 +195,11 @@ export default function ProjectsPage() {
             Research Projects
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Exploring cutting-edge solutions in visual information technology
+            The research projects conducted at the CVIT Lab have been supported
+            through various funding sources and carried out in collaboration
+            with several partner universities. These partnerships and financial
+            contributions have played a vital role in advancing the lab's
+            research objectives and fostering interdisciplinary innovation.
           </p>
         </div>
 
@@ -181,7 +220,7 @@ export default function ProjectsPage() {
         </div>
 
         {/* All Projects by Category */}
-        <div className="space-y-16">
+        {/* <div className="space-y-16">
           {projectCategories.map((category) => (
             <div
               key={category.id}
@@ -201,10 +240,10 @@ export default function ProjectsPage() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Collaborations Section */}
-        <div className="mt-16 bg-blue-50 rounded-xl shadow-lg p-8">
+        {/* <div className="mt-16 bg-blue-50 rounded-xl shadow-lg p-8">
           <h2 className="text-2xl font-bold mb-6">
             Collaborations & Partnerships
           </h2>
@@ -227,7 +266,7 @@ export default function ProjectsPage() {
               View All Collaborators
             </button>
           </div>
-        </div>
+        </div> */}
 
         {/* Project Proposal CTA */}
         <div className="mt-16 grid md:grid-cols-2 gap-8 items-center bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 text-white">

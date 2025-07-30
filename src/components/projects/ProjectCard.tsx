@@ -26,7 +26,15 @@ export default function ProjectCard({
           {project.title}
         </h3>
 
-        <p className="text-gray-600 mb-4 flex-grow">{project.description}</p>
+        <ul className="list-disc text-sm text-gray-600">
+          {project.data.map((item, i) => (
+            <li key={i} className="p-1">
+              {item}
+            </li>
+          ))}
+        </ul>
+
+        {/* <p className="text-gray-600 mb-4 flex-grow">{project.description}</p> */}
 
         <div className="mt-4">
           <h4 className="text-sm font-medium text-gray-900 mb-2">

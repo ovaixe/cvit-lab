@@ -1,8 +1,9 @@
 import PeopleGrid from "@/components/people/PeopleGrid";
+import PersonCard from "@/components/people/PersonCard";
 import { PEOPLE } from "@/utils/data";
 
 export default function PeoplePage() {
-  const director = PEOPLE.filter((p) => p.category === "director");
+  const director = PEOPLE.filter((p) => p.category === "director")[0];
   const faculty = PEOPLE.filter((p) => p.category === "faculty");
   const phdStudents = PEOPLE.filter((p) => p.category === "phd");
   const msStudents = PEOPLE.filter((p) => p.category === "ms");
@@ -17,7 +18,37 @@ export default function PeoplePage() {
           </p>
         </div>
 
-        <PeopleGrid title="Director" people={director} />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <PersonCard person={director} variant="director" />
+          <div className="space-y-3">
+            <h2 className="font-bold md:text-lg">ADMINISTRATIVE EXPERIENCE</h2>
+            <ul className="list-disc pl-5 text-sm text-gray-600">
+              <li>
+                Dean of International Academy, Yuan Ze University, Taoyuan,
+                Taiwan
+              </li>
+              <li>
+                Vice Director of AI Center, Yuan Ze University, Taoyuan, Taiwan
+              </li>
+              <li>
+                Senior Liaison of GAO, Yuan Ze University, Taoyuan, Taiwan
+              </li>
+              <li>
+                Chief of Global Affairs Office, Yuan Ze University, Taoyuan,
+                Taiwan
+              </li>
+              <li>
+                Deputy Chief of Chief of Global Affairs Office, Yuan Ze
+                University, Taoyuan, Taiwan
+              </li>
+              <li>
+                Chair, Department of Bioinformatics and Medical Engineering,
+                Asia University, Taichung, Taiwan
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <PeopleGrid title="Faculty" people={faculty} />
         <PeopleGrid title="PhD Students" people={phdStudents} />
         <PeopleGrid title="MS Students" people={msStudents} />

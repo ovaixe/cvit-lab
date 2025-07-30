@@ -1,55 +1,115 @@
 import NewsItem from "@/components/news/NewsItem";
+import Image from "next/image";
 
 export default function NewsPage() {
-  // Sample news data
   const newsItems = [
     {
       id: 1,
-      title: "CVIT Lab wins Best Paper Award at CVPR 2023",
-      date: "June 15, 2023",
+      title: "Yuan Ze Studies Gold Award 2024",
+      date: "June 15, 2024",
       description:
-        "Our research on scene understanding received the Best Paper Award at the prestigious CVPR conference.",
+        "Congratulations to Sang Le for achieving the Yuan Ze Studies Gold Award 2024 as the top-ranked student for the second year in a row.",
       category: "Awards",
     },
     {
       id: 2,
-      title: "New research collaboration with Google AI",
-      date: "May 3, 2023",
+      title: "University of Illinois at Urbana-Champaign, USA",
+      date: "May 3, 2024",
       description:
-        "We're excited to announce a new partnership with Google AI to advance research in visual question answering.",
-      category: "Partnerships",
+        "Congratulations to Chia-Chun Hsiao for being admitted to the Electrical and Computer Engineering program at the University of Illinois at Urbana-Champaign, USA, 2024.",
+      category: "Addmissions",
     },
     {
       id: 3,
-      title: "Dr. Sharma joins as Postdoctoral Researcher",
-      date: "April 20, 2023",
+      title: "University of Southern California, USA",
+      date: "April 20, 2024",
       description:
-        "We welcome Dr. Anjali Sharma who joins our lab to work on medical image analysis projects.",
-      category: "People",
+        "Congratulations to Yu-Wei Chen for being admitted to the Electrical and Computer Engineering program at the University of Southern California, USA, 2024.",
+      category: "Addmissions",
     },
     {
       id: 4,
-      title: "Lab hosts International Workshop on Computer Vision",
+      title:
+        "Best Paper Award from Sixth International Symposium on Computer, Consumer and Control (IS3C)",
       date: "March 12, 2023",
       description:
-        "We successfully hosted over 100 researchers at our annual workshop on computer vision technologies.",
-      category: "Events",
+        "Congratulations to Junaidul Islam, Elvin Nur Furqon, Isack Farady received Best Paper Award from Sixth International Symposium on Computer, Consumer and Control (IS3C), 2023",
+      category: "Awards",
+    },
+    {
+      id: 5,
+      title:
+        "Best Paper Award from IEEE 26th International Computer Science and Engineering Conference (ICSEC)",
+      date: "March 12, 2022",
+      description:
+        "Congratulations to Isack Farady received Best Paper Award from IEEE 26th International Computer Science and Engineering Conference (ICSEC) 2022",
+      category: "Awards",
+    },
+    {
+      id: 6,
+      title: "Research Award!",
+      date: "March 12, 2022",
+      description:
+        "Congratulations to Professor Chih-Yang Lin for receiving the 2022 YZU Outstanding Research Award!",
+      category: "Awards",
+    },
+    {
+      id: 7,
+      title: "Columbia University and University of Washington, USA",
+      date: "March 12, 2022",
+      description:
+        "Congratulations to Chang, Cheng-Chun (張程鈞) for being admitted to Columbia University and University of Washington, USA.",
+      category: "Addmissions",
+    },
+    {
+      id: 8,
+      title: "IET Fellow",
+      date: "March 12, 2022",
+      description:
+        "Congratulations to Professor Chih-Yang Lin for receiving an IET Fellow, 2022.",
+      category: "Awards",
+    },
+    {
+      id: 9,
+      title: "Queensland University, Australia",
+      date: "March 12, 2022",
+      description:
+        "Congratulations to Kao, Wei-Cheng (高偉成) for being admitted to Queensland University, Australia.",
+      category: "Addmissions",
+    },
+    {
+      id: 10,
+      title: "2021 CECE_YZU Outstanding Research Award!",
+      date: "March 12, 2021",
+      description:
+        "Congratulations to Professor Chih-Yang Lin for receiving the 2021 CECE_YZU Outstanding Research Award!",
+      category: "Awards",
     },
   ];
 
   return (
     <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            News & Events
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Stay updated with the latest happenings at CVIT Lab
-          </p>
+        <div className="relative w-full h-fit pt-20 bg-secondary rounded-xl shadow-3xl drop-shadow-2xl flex flex-col items-center justify-center gap-2 mb-12">
+          <div className="bg-[#F8C302] relative w-[80%] md:w-96 h-48 rounded-xl shadow-amber-700 shadow-2xl">
+            <div className="relative -top-12 left-[50%] translate-x-[-50%] w-70 h-52">
+              <Image
+                src={"/images/news.avif"}
+                alt="New"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+          <div className="p-5">
+            <h1 className="text-4xl font-bold text-primary mb-4">NEWS</h1>
+            <p className="text-xl text-primary max-w-3xl mx-auto">
+              Stay updated with the latest happenings at CVIT Lab
+            </p>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div className="bg-primary text-white rounded-xl p-6 md:col-span-2">
             <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64 mb-4" />
             <span className="inline-block bg-blue-500 text-sm px-3 py-1 rounded-full mb-2">
@@ -116,7 +176,7 @@ export default function NewsPage() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="bg-white rounded-xl shadow-lg p-6">
           <h2 className="text-2xl font-bold mb-6">Latest News</h2>

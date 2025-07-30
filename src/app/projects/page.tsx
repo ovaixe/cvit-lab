@@ -198,7 +198,7 @@ export default function ProjectsPage() {
             The research projects conducted at the CVIT Lab have been supported
             through various funding sources and carried out in collaboration
             with several partner universities. These partnerships and financial
-            contributions have played a vital role in advancing the lab's
+            contributions have played a vital role in advancing the lab&apos;s
             research objectives and fostering interdisciplinary innovation.
           </p>
         </div>

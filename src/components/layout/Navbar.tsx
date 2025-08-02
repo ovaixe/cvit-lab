@@ -15,12 +15,13 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link
               href="/"
-              className="flex-shrink-0 flex items-center"
+              className="flex-shrink-0 flex items-center gap-2"
               onClick={() => setIsOpen(false)}
             >
-              <div className="relative w-40 h-10 md:w-60 md:h-14">
-                <Image fill src="/logo.avif" alt="CVIT Lab" />
+              <div className="relative w-10 h-10 md:w-14 md:h-14">
+                <Image fill src="/logo.png" alt="CVIT Lab" />
               </div>
+              <h2 className="text-white font-bold">CVIT Lab</h2>
             </Link>
           </div>
 
@@ -30,7 +31,7 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-white hover:text-blue-300 hover:scale-110 font-medium transition-all"
+                className="text-white text-sm lg:text-lg hover:text-blue-300 hover:scale-110 font-medium transition-all"
               >
                 {item.title}
               </Link>

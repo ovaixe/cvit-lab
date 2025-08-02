@@ -10,10 +10,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center mb-4">
-              <div className="relative w-60 h-14">
-                <Image fill src="/logo.avif" alt="CVIT Lab" />
+            <div className="flex items-center gap-2 mb-4">
+              <div className="relative max-w-20 w-full h-auto aspect-square">
+                <Image fill src="/logo.png" alt="CVIT Lab" />
               </div>
+              <h2 className="font-semibold text-2xl md:text-3xl">CVIT Lab</h2>
             </div>
             <p className="text-gray-400 mb-4">
               The Computer Vision and Interactive Technology (CVIT) Lab
@@ -97,7 +98,7 @@ export default function Footer() {
               </a>
             </div>
             <p className="text-gray-400 mb-2">
-              <span className="font-medium">Email:</span> cvit@iiit.ac.in
+              <span className="font-medium">Email:</span> andrewlin@ncu.edu.tw
             </p>
             <p className="text-gray-400">
               <span className="font-medium">Phone:</span> +886-3-4227151 Ext.

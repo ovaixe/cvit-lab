@@ -191,12 +191,6 @@ export default function NewsPage() {
               />
             ))}
           </div>
-
-          <div className="mt-8 flex justify-center">
-            <button className="border border-gray-300 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-50">
-              Load More
-            </button>
-          </div>
         </div>
       </div>
     </section>

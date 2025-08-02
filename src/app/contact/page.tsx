@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function ContactPage() {
   return (
     <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
@@ -58,7 +60,7 @@ export default function ContactPage() {
                       d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     />
                   </svg>
-                  <p>cvit@iiit.ac.in</p>
+                  <p>andrewlin@ncu.edu.tw</p>
                 </div>
 
                 <div className="flex">
@@ -82,19 +84,32 @@ export default function ContactPage() {
               <div className="mt-8">
                 <h3 className="text-lg font-bold mb-4">Office Hours</h3>
                 <p>Monday - Friday: 9:00 AM - 5:30 PM</p>
-                <p className="mt-1">Saturday: 10:00 AM - 2:00 PM</p>
                 <p className="mt-1 text-gray-600">
-                  Closed on Sundays and public holidays
+                  Closed on Saturdays, Sundays and public holidays
                 </p>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="bg-white rounded-xl shadow-lg p-8 w-full">
               <h2 className="text-2xl font-bold mb-4">Directions</h2>
-              <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64" />
-              <button className="mt-4 w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700">
-                Get Directions
-              </button>
+              <div className="rounded-xl w-full h-64">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d1808.4785085763601!2d121.188535!3d24.967577!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDU4JzAyLjciTiAxMjHCsDExJzE4LjkiRQ!5e0!3m2!1sen!2sus!4v1753879954580!5m2!1sen!2sus"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full rounded-xl"
+                ></iframe>
+              </div>
+
+              <div className="mt-6">
+                <Link
+                  href="https://www.google.com/maps/dir//24.9674167,121.1885833/@24.967577,121.188535,16z?hl=en&entry=ttu&g_ep=EgoyMDI1MDcyNy4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  className="mt-4 mx-auto w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700"
+                >
+                  Get Directions
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -169,7 +184,7 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700"
+                  className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 cursor-pointer"
                 >
                   Send Message
                 </button>

@@ -10,7 +10,7 @@ type PersonCardProps = {
     research?: string;
     current?: string;
   };
-  variant: "director" | "faculty" | "phd" | "ms" | "phdg" | "msg";
+  variant: "director" | "faculty" | "phd" | "ms" | "phdg" | "msg" | "alumni";
 };
 
 export default function PersonCard({ person, variant }: PersonCardProps) {

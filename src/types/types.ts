@@ -14,7 +14,7 @@ export type Person = {
   name: string;
   role: string;
   email: string;
-  category: "director" | "faculty" | "phd" | "ms" | "phdg" | "msg";
+  category: "director" | "faculty" | "phd" | "ms" | "phdg" | "msg" | "alumni";
   description?: string;
 };
 

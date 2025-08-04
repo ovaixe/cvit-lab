@@ -13,30 +13,31 @@ export const NAV_ITEMS: NavItem[] = [
 export const RESEARCH_AREAS: ResearchArea[] = [
   {
     id: 1,
-    title: "Computer Vision",
+    title: "Automated Optical Inspection",
     description:
-      "Research in image recognition, object detection, and scene understanding.",
+      "Automated Optical Inspection (AOI) has become a powerful solution in the steel making industry. AOI techniques are used  to inspect the surfaces of objects to reduce defective products with high precision and speed. In the inspection process, an AOI device acquires image of the object under inspection using an optical imaging system, and then identifies the type of defects by matching the input image with known template. Recently, deep learning has becoming a powerful solution for industrial inspection applications. In particular, deep learning-based object detection techniques are used to improve the speed and accuracy of an AOI device.",
   },
   {
     id: 2,
-    title: "Machine Learning",
+    title: "Multimedia Security",
     description:
-      "Developing novel algorithms for pattern recognition and predictive modeling.",
+      "With the development of web and digital products, camera devices including surveillance and digital cameras are widely used. However, there are public concerns on the confidentiality and security in data storage. There are multiple cases of stealth involving multimedia data stored online which are then distributed with malicious intention, which raise the public's awareness of privacy and how personal information is being stored and used. While privacy is important, surveillance cameras can help us monitor, providing social security or proofs for legal judgement. Thus, the ways to monitor and also preserve the privacy in real-time systems are the foci of our research in this field, most notably image encryption and digital rights management.",
   },
   {
     id: 3,
-    title: "Image Processing",
-    description: "Techniques for image enhancement, restoration, and analysis.",
+    title: "Video Surveillance",
+    description:
+      "Surveillance system is important in providing security and constant observation of locations to obtain information when needed. Over the years, various techniques in this field has been developed, such as recognition, identification, tracking, counting, authentication and so on. The challenges arose from developing these techniques are related to the quality of the video and issues that might affect how computer views the video, such as low resolution, obtrusion, moving objects and feature identifications. In this field, our research focuses on obtaining higher accuracy  in video surveillance to achieve multiple purposes, such as identifying while tracking moving objects without being affected by obtrusion. Additionally, we aim to achieve alternative practical applications of these techniques in other fields, such as human relationship mapping and unmanned store maintenance for robots.",
   },
   {
     id: 4,
-    title: "Pattern Recognition",
+    title: "Computer Vision & Image Processing",
     description:
-      "Algorithms for identifying patterns and regularities in data.",
+      "Using computers in processing various images have been in the world for decades. With the ability for computer to understand complex features to achieve purpose, it has developed to complete difficult image professing, such as Deepfake and even manages to create special artworks made by AI. While Computer Vision & Image Processing has its artistic side, our lab focuses on relevant research which leans towards applications in the industry or practicality in every aspects of life. The field of this research is not limited to creating new image, but allows the computer to understand and execute necessary actions for specific intentions",
   },
 ];
 
-export const PEOPLE: Person[] = [
+export const  PEOPLE: Person[] = [
   {
     id: 1,
     name: "Prof. Chih-Yang Lin",
@@ -143,6 +144,160 @@ export const PEOPLE: Person[] = [
     email: "",
     category: "ms",
   },
+  {
+    id: 15,
+    name: "Kalil Muchtar",
+    role: "Ph.D Graduate",
+    email: "",
+    category: "phdg",
+  },
+  {
+    id: 16,
+    name: "Panyaporn Prangjarote",
+    role: "Ph.D Graduate",
+    email: "",
+    category: "phdg",
+  },
+  {
+    id: 17,
+   name: "Fityanul Akhyar",
+    role: "Ph.D Graduate",
+    email: "",
+    category: "phdg",
+  },
+  {
+    id: 18,
+    name: "Isack Farady",
+    role: "Ph.D Graduate",
+    email: "",
+    category: "phdg",
+  },
+  {
+    id: 19,
+    name: "Wei, Wen Chang",
+    role: "MS Graduate",
+    email: "",
+    category: "msg",
+  },
+  {
+    id: 20,
+    name: "Tatenda Muindisi",
+    role: "MS Graduate",
+    email: "",
+    category: "msg",
+  },
+  {
+    id: 21,
+    name: "Kao, Wei Chen",
+    role: "MS Graduate",
+    email: "",
+    category: "msg",
+  },
+  {
+    id: 22,
+    name: "Kanatip Prompol",
+    role: "MS Graduate",
+    email: "",
+    category: "msg",
+  },
+  {
+    id: 23,
+    name: "Amornthep Rojanasarit",
+    role: "MS Graduate",
+    email: "",
+    category: "msg",
+  },
+  {
+    id: 24,
+    name: "Sirakriangkrai Panida",
+    role: "MS Graduate",
+    email: "",
+    category: "msg",
+  },
+  {
+    id: 25,
+    name: "Fu, Jing Tong",
+    role: "MS Graduate",
+    email: "",
+    category: "msg",
+  },
+  {
+    id: 26,
+    name: "Hong, Jia Wei",
+    role: "MS Graduate",
+    email: "",
+    category: "msg",
+  },
+  {
+    id: 27,
+    name: "Cucliciu",
+    role: "MS Graduate",
+    email: "",
+    category: "msg",
+  },
+  {
+    id: 28,
+    name: "Hsiao, Kuo Wei",
+    role: "MS Graduate",
+    email: "",
+    category: "msg",
+  },
+  {
+    id: 29,
+    name: "Wang, Shang Ming",
+    role: "MS Graduate",
+    email: "",
+    category: "msg",
+  },
+  {
+    id: 30,
+    name: "Li, Zong Han",
+    role: "MS Graduate",
+    email: "",
+    category: "msg",
+  },
+  {
+    id: 31,
+    name: "Wang, Shun Wen",
+    role: "MS Graduate",
+    email: "",
+    category: "msg",
+  },
+  {
+    id: 32,
+    name: "Lo, Chang Yen",
+    role: "MS Graduate",
+    email: "",
+    category: "msg",
+  },
+  {
+    id: 33,
+    name: "Wang, Sheng Hung",
+    role: "MS Graduate",
+    email: "",
+    category: "msg",
+  },
+  {
+    id:34,
+    name: "Sang Lê",
+    role: "MS Graduate",
+    email: "",
+    category: "msg",
+  },
+  {
+    id: 35,
+    name: "Alifya Febriana",
+    role: "MS Graduate",
+    email: "",
+    category: "msg",
+  },
+  {
+    id: 36,
+    name: "Elvin Nur Furqan",
+    role: "MS Graduate",
+    email: "",
+    category: "msg",
+  },
 ];
 
 export const PUBLICATIONS: Publication[] = [
@@ -155,4 +310,89 @@ export const PUBLICATIONS: Publication[] = [
     link: "#",
   },
   // Add more publications...
+];
+
+export const NEWS_ITEMS = [
+  {
+    id: 1,
+    title: "Yuan Ze Studies Gold Award 2024",
+    date: "June 15, 2024",
+    description:
+      "Congratulations to Sang Le for achieving the Yuan Ze Studies Gold Award 2024 as the top-ranked student for the second year in a row.",
+    category: "Awards",
+  },
+  {
+    id: 2,
+    title: "University of Illinois at Urbana-Champaign, USA",
+    date: "May 3, 2024",
+    description:
+      "Congratulations to Chia-Chun Hsiao for being admitted to the Electrical and Computer Engineering program at the University of Illinois at Urbana-Champaign, USA, 2024.",
+    category: "Addmissions",
+  },
+  {
+    id: 3,
+    title: "University of Southern California, USA",
+    date: "April 20, 2024",
+    description:
+      "Congratulations to Yu-Wei Chen for being admitted to the Electrical and Computer Engineering program at the University of Southern California, USA, 2024.",
+    category: "Addmissions",
+  },
+  {
+    id: 4,
+    title:
+      "Best Paper Award from Sixth International Symposium on Computer, Consumer and Control (IS3C)",
+    date: "March 12, 2023",
+    description:
+      "Congratulations to Junaidul Islam, Elvin Nur Furqon, Isack Farady received Best Paper Award from Sixth International Symposium on Computer, Consumer and Control (IS3C), 2023",
+    category: "Awards",
+  },
+  {
+    id: 5,
+    title:
+      "Best Paper Award from IEEE 26th International Computer Science and Engineering Conference (ICSEC)",
+    date: "March 12, 2022",
+    description:
+      "Congratulations to Isack Farady received Best Paper Award from IEEE 26th International Computer Science and Engineering Conference (ICSEC) 2022",
+    category: "Awards",
+  },
+  {
+    id: 6,
+    title: "Research Award!",
+    date: "March 12, 2022",
+    description:
+      "Congratulations to Professor Chih-Yang Lin for receiving the 2022 YZU Outstanding Research Award!",
+    category: "Awards",
+  },
+  {
+    id: 7,
+    title: "Columbia University and University of Washington, USA",
+    date: "March 12, 2022",
+    description:
+      "Congratulations to Chang, Cheng-Chun (張程鈞) for being admitted to Columbia University and University of Washington, USA.",
+    category: "Addmissions",
+  },
+  {
+    id: 8,
+    title: "IET Fellow",
+    date: "March 12, 2022",
+    description:
+      "Congratulations to Professor Chih-Yang Lin for receiving an IET Fellow, 2022.",
+    category: "Awards",
+  },
+  {
+    id: 9,
+    title: "Queensland University, Australia",
+    date: "March 12, 2022",
+    description:
+      "Congratulations to Kao, Wei-Cheng (高偉成) for being admitted to Queensland University, Australia.",
+    category: "Addmissions",
+  },
+  {
+    id: 10,
+    title: "2021 CECE_YZU Outstanding Research Award!",
+    date: "March 12, 2021",
+    description:
+      "Congratulations to Professor Chih-Yang Lin for receiving the 2021 CECE_YZU Outstanding Research Award!",
+    category: "Awards",
+  },
 ];

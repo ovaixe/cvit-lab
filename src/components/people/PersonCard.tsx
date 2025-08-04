@@ -33,7 +33,7 @@ export default function PersonCard({ person, variant }: PersonCardProps) {
           }`}
         >
           <Image
-            src={`/images/team/${person.id}.avif`}
+            src={`/images/team/${person.id}.jpg`}
             alt={person.name}
             fill
             className="object-cover"
@@ -86,7 +86,7 @@ export default function PersonCard({ person, variant }: PersonCardProps) {
         </div>
       </div>
 
-      <div className="p-4 text-gray-600">{person?.description}</div>
+      <div className="p-4 text-gray-600 text-justify">{person?.description}</div>
     </div>
   );
 }

@@ -7,6 +7,8 @@ export default function PeoplePage() {
   const faculty = PEOPLE.filter((p) => p.category === "faculty");
   const phdStudents = PEOPLE.filter((p) => p.category === "phd");
   const msStudents = PEOPLE.filter((p) => p.category === "ms");
+  const phdGrads = PEOPLE.filter((p) => p.category === "phdg");
+  const msGrads = PEOPLE.filter((p) => p.category === "msg");
 
   return (
     <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
@@ -52,6 +54,8 @@ export default function PeoplePage() {
         <PeopleGrid title="Faculty" people={faculty} />
         <PeopleGrid title="PhD Students" people={phdStudents} />
         <PeopleGrid title="MS Students" people={msStudents} />
+        <PeopleGrid title="PHD Graduates" people={phdGrads} />
+        <PeopleGrid title="MS Graduates" people={msGrads} />
 
         <div className="mt-16 bg-white rounded-xl shadow-lg p-8">
           <h2 className="text-2xl font-bold mb-4">Join Our Team</h2>

@@ -1,92 +1,10 @@
-import NewsItem from "@/components/news/NewsItem";
 import Image from "next/image";
 
-export default function NewsPage() {
-  const newsItems = [
-    {
-      id: 1,
-      title: "Yuan Ze Studies Gold Award 2024",
-      date: "June 15, 2024",
-      description:
-        "Congratulations to Sang Le for achieving the Yuan Ze Studies Gold Award 2024 as the top-ranked student for the second year in a row.",
-      category: "Awards",
-    },
-    {
-      id: 2,
-      title: "University of Illinois at Urbana-Champaign, USA",
-      date: "May 3, 2024",
-      description:
-        "Congratulations to Chia-Chun Hsiao for being admitted to the Electrical and Computer Engineering program at the University of Illinois at Urbana-Champaign, USA, 2024.",
-      category: "Addmissions",
-    },
-    {
-      id: 3,
-      title: "University of Southern California, USA",
-      date: "April 20, 2024",
-      description:
-        "Congratulations to Yu-Wei Chen for being admitted to the Electrical and Computer Engineering program at the University of Southern California, USA, 2024.",
-      category: "Addmissions",
-    },
-    {
-      id: 4,
-      title:
-        "Best Paper Award from Sixth International Symposium on Computer, Consumer and Control (IS3C)",
-      date: "March 12, 2023",
-      description:
-        "Congratulations to Junaidul Islam, Elvin Nur Furqon, Isack Farady received Best Paper Award from Sixth International Symposium on Computer, Consumer and Control (IS3C), 2023",
-      category: "Awards",
-    },
-    {
-      id: 5,
-      title:
-        "Best Paper Award from IEEE 26th International Computer Science and Engineering Conference (ICSEC)",
-      date: "March 12, 2022",
-      description:
-        "Congratulations to Isack Farady received Best Paper Award from IEEE 26th International Computer Science and Engineering Conference (ICSEC) 2022",
-      category: "Awards",
-    },
-    {
-      id: 6,
-      title: "Research Award!",
-      date: "March 12, 2022",
-      description:
-        "Congratulations to Professor Chih-Yang Lin for receiving the 2022 YZU Outstanding Research Award!",
-      category: "Awards",
-    },
-    {
-      id: 7,
-      title: "Columbia University and University of Washington, USA",
-      date: "March 12, 2022",
-      description:
-        "Congratulations to Chang, Cheng-Chun (張程鈞) for being admitted to Columbia University and University of Washington, USA.",
-      category: "Addmissions",
-    },
-    {
-      id: 8,
-      title: "IET Fellow",
-      date: "March 12, 2022",
-      description:
-        "Congratulations to Professor Chih-Yang Lin for receiving an IET Fellow, 2022.",
-      category: "Awards",
-    },
-    {
-      id: 9,
-      title: "Queensland University, Australia",
-      date: "March 12, 2022",
-      description:
-        "Congratulations to Kao, Wei-Cheng (高偉成) for being admitted to Queensland University, Australia.",
-      category: "Addmissions",
-    },
-    {
-      id: 10,
-      title: "2021 CECE_YZU Outstanding Research Award!",
-      date: "March 12, 2021",
-      description:
-        "Congratulations to Professor Chih-Yang Lin for receiving the 2021 CECE_YZU Outstanding Research Award!",
-      category: "Awards",
-    },
-  ];
+import NewsItem from "@/components/news/NewsItem";
 
+import { NEWS_ITEMS } from "@/utils/data";
+
+export default function NewsPage() {
   return (
     <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -181,7 +99,7 @@ export default function NewsPage() {
         <div className="bg-white rounded-xl shadow-lg p-6">
           <h2 className="text-2xl font-bold mb-6">Latest News</h2>
           <div className="space-y-6">
-            {newsItems.map((item) => (
+            {NEWS_ITEMS.map((item) => (
               <NewsItem
                 key={item.id}
                 title={item.title}

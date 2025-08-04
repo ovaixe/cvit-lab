@@ -10,8 +10,15 @@ export default function ResearchPage() {
             Research Areas
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our lab focuses on cutting-edge research in visual information
-            technology
+            Our main research directions are related to applications in
+            multimedia, including Computer Vision, Interactive Technology,
+            Multimedia Content Analysis, Automated Optical Inspection and
+            Machine Learning. Since we focus on innovative methodical designs
+            which integrates interdisciplinary technologies, our team has close
+            cooperation with various industries. Combining theory and practicum,
+            our training provides ample opportunity for students career and
+            research development. For more details about our research, click on
+            the pictures below.
           </p>
         </div>
 

@@ -1,10 +1,11 @@
 import Hero from "@/components/home/Hero";
 import ResearchCard from "@/components/research/ResearchCard";
-import { RESEARCH_AREAS } from "@/utils/data";
+import { RESEARCH_AREAS, NEWS_ITEMS } from "@/utils/data";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-red-200">
+    <div className="min-h-screen">
       <Hero />
 
       {/* Research Preview */}
@@ -33,6 +34,28 @@ export default function Home() {
               />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* News */}
+      <section className="py-16 bg-gray-50  mb-12 space-y-3">
+        <h2 className="text-3xl font-bold text-center text-gray-900">News</h2>
+
+        <ul className="list-disc mx-auto w-fit">
+          {NEWS_ITEMS.map(
+            (item, i) =>
+              i < 5 && (
+                <li key={item.id} className="text-lg text-gray-700 mb-2">
+                  {item.description}
+                </li>
+              )
+          )}
+        </ul>
+
+        <div className="text-center">
+          <Link href={"/news"} className="bg-gray-200 border-gray-300 border-2 text-gray-500 font-semibold p-2 rounded-md">
+            View More
+          </Link>
         </div>
       </section>
 

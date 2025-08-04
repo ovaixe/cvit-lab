@@ -10,7 +10,7 @@ type PersonCardProps = {
     research?: string;
     current?: string;
   };
-  variant: "director" | "faculty" | "phd" | "ms" | "alumni";
+  variant: "director" | "faculty" | "phd" | "ms" | "phdg" | "mdg";
 };
 
 export default function PersonCard({ person, variant }: PersonCardProps) {
@@ -86,7 +86,9 @@ export default function PersonCard({ person, variant }: PersonCardProps) {
         </div>
       </div>
 
-      <div className="p-4 text-gray-600 text-justify">{person?.description}</div>
+      <div className="p-4 text-gray-600 text-justify">
+        {person?.description}
+      </div>
     </div>
   );
 }

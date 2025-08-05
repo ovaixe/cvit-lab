@@ -19,7 +19,7 @@ export default function ResearchGrid({ researchAreas }: ResearchGridProps) {
             <h3 className="text-xl font-bold text-gray-900 mb-2">
               {research.title}
             </h3>
-            <p className="text-gray-600">{research.description}</p>
+            <p className="text-gray-600 text-justify">{research.description}</p>
             <button className="mt-4 text-blue-600 font-medium hover:underline">
               View Projects
             </button>

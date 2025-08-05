@@ -194,7 +194,7 @@ export default function ProjectsPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Research Projects
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-justify text-gray-600 max-w-3xl mx-auto">
             The research projects conducted at the CVIT Lab have been supported
             through various funding sources and carried out in collaboration
             with several partner universities. These partnerships and financial
@@ -284,7 +284,7 @@ export default function ProjectsPage() {
             </a>
           </div>
           <div className="flex justify-center">
-            <div className="bg-white bg-opacity-20 rounded-full p-8">
+            <div className="bg-blue-600 bg-opacity-20 rounded-full p-8">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-24 w-24"

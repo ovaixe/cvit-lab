@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import ResearchGrid from "@/components/research/ResearchGrid";
 import { RESEARCH_AREAS } from "@/utils/data";
 
@@ -9,7 +11,7 @@ export default function ResearchPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Research Areas
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-justify text-gray-600 max-w-3xl mx-auto">
             Our main research directions are related to applications in
             multimedia, including Computer Vision, Interactive Technology,
             Multimedia Content Analysis, Automated Optical Inspection and
@@ -32,8 +34,20 @@ export default function ResearchPage() {
             equipment, and dedicated research spaces.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-            <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64" />
-            <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64" />
+            <Image
+              src="/images/research/1.png"
+              alt="Lab"
+              width={400}
+              height={200}
+              className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64 aspect-auto"
+            />
+            <Image
+              src="/images/research/2.png"
+              alt="Lab"
+              width={400}
+              height={200}
+              className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64 aspect-auto"
+            />
           </div>
         </div>
       </div>

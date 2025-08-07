@@ -23,7 +23,7 @@ export type Publication = {
   title: string;
   authors: string[];
   conference: string;
-  year: number;
+  year: number | null;
   link: string;
   type: "journal" | "conference" | "patent";
   abstract?: string;

@@ -38,10 +38,10 @@ export default function Home() {
       </section>
 
       {/* News */}
-      <section className="py-16 bg-gray-50  mb-12 space-y-3">
+      <section className="py-16 max-w-7xl mx-auto mb-12 space-y-3 px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center text-gray-900">News</h2>
 
-        <ul className="list-disc mx-auto w-fit">
+        <ul className="text-justify list-disc mx-auto w-fit">
           {NEWS_ITEMS.map(
             (item, i) =>
               i < 5 && (
@@ -53,8 +53,23 @@ export default function Home() {
         </ul>
 
         <div className="text-center">
-          <Link href={"/news"} className="bg-gray-200 border-gray-300 border-2 text-gray-500 font-semibold p-2 rounded-md">
-            View More
+          <Link
+            href={"/news"}
+            className="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors group"
+          >
+            View more
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 ml-1 transition-transform group-hover:translate-x-1"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              />
+            </svg>
           </Link>
         </div>
       </section>

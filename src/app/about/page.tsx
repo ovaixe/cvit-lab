@@ -71,7 +71,7 @@ export default function AboutPage() {
     },
   ];
   return (
-    <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
+    <section className="py-16 bg-gradient-to-b from-blue-50 to-white text-justify">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12 grid grid-cols-1 md:grid-cols-3">
           <div className="w-full h-96 relative">
@@ -87,7 +87,7 @@ export default function AboutPage() {
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               About CVIT Lab
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-2">
+            <p className="text-xl text-justify text-gray-600 max-w-3xl mx-auto mb-2">
               The Computer Vision and Interactive Technology (CVIT) Lab is one
               of the{" "}
               <a
@@ -122,7 +122,7 @@ export default function AboutPage() {
             About Computer Vision
           </h2>
 
-          <div className="space-y-15 text-xl text-gray-700">
+          <div className="space-y-15 text-xl text-justify text-gray-700">
             <p>
               With the advancement of modern technology, Artificial Intelligence
               has become a vital part in every major industry. Processing and
@@ -468,7 +468,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="mb-16">
+        <div className="mb-16 px-6 md:px-8">
           <h2 className="text-3xl font-bold mb-6 text-center">
             Conclusions and Further Reading
           </h2>
@@ -518,7 +518,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 mb-16">
+        <div className="mb-16">
           <h2 className="text-2xl font-bold mb-6">Research Focus Areas</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {RESEARCH_AREAS.map((research) => (

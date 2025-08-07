@@ -16,8 +16,8 @@ export default function ResearchCard({
 }: ResearchCardProps) {
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-      <div className="p-6 h-full flex flex-col">
-        <div className="flex items-start">
+      <div className="p-6 h-full flex flex-col gap-2">
+        <div className="flex items-center">
           {icon || (
             <div className="bg-blue-100 p-3 rounded-lg mr-4">
               <svg
@@ -37,13 +37,12 @@ export default function ResearchCard({
             </div>
           )}
 
-          <div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
-            <p className="text-gray-600 text-justify">{description}</p>
-          </div>
+          <h3 className="md:text-xl font-bold text-gray-900 mb-2">{title}</h3>
         </div>
 
-        <div className="mt-auto pt-4">
+        <p className="text-gray-600 text-justify">{description}</p>
+
+        <div className="mt-auto">
           <Link
             href={link}
             className="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors group"

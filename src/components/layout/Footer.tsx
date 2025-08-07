@@ -111,26 +111,7 @@ export default function Footer() {
           <p className="text-gray-400 text-center md:text-left">
             © {currentYear} CVIT Lab. All rights reserved.
           </p>
-          <div className="mt-4 md:mt-0 flex space-x-6">
-            <Link
-              href="/privacy"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="/terms"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              Terms of Use
-            </Link>
-            <Link
-              href="/sitemap"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              Sitemap
-            </Link>
-          </div>
+          <div className="mt-4 md:mt-0 flex space-x-6"></div>
         </div>
       </div>
     </footer>

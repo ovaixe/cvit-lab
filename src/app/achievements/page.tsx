@@ -981,7 +981,7 @@ export default function AchievementsPage() {
                 <div className="bg-blue-100 p-3 rounded-lg mr-4 text-blue-600">
                   {category.icon}
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900">
+                <h2 className="md:text-2xl font-bold text-primary">
                   {category.title}
                 </h2>
               </div>

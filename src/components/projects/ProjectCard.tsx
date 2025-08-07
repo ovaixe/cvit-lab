@@ -17,7 +17,7 @@ export default function ProjectCard({
     >
       <div className="p-6 h-full flex flex-col">
         {isFeatured && (
-          <div className="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block">
+          <div className="bg-blue-100 text-blue-800 w-fit text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block">
             Featured Project
           </div>
         )}

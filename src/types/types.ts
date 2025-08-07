@@ -20,11 +20,25 @@ export type Person = {
 
 export type Publication = {
   id: number;
-  year: number;
   title: string;
-  authors: string;
-  venue: string;
+  authors: string[];
+  conference: string;
+  year: number;
   link: string;
+  type: "journal" | "conference" | "patent";
+  abstract?: string;
+  keywords?: string[];
+  impactFactor?: number;
+  journalRanking?: string;
+  category?: string;
+  status?: string;
+  month?: string;
+  doi?: string;
+  volume?: number;
+  issue?: number;
+  pages?: string;
+  indexed?: string[];
+  impactFactorYear?: number;
 };
 
 export type Project = {

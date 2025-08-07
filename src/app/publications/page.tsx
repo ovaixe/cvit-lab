@@ -37,11 +37,16 @@ export default function PublicationsPage() {
         pub.conference.toLowerCase().includes(searchTerm.toLowerCase())
     )
     .filter(
-      (pub) => selectedYear === "all" || pub.year.toString() === selectedYear
+      (pub) =>
+        selectedYear === "all" || (pub.year?.toString() ?? "") === selectedYear
     );
 
   const years = Array.from(
-    new Set(allPublications[activeTab].map((pub) => pub.year))
+    new Set(
+      allPublications[activeTab]
+        .map((pub) => pub.year)
+        .filter((year) => year !== null)
+    )
   ).sort((a, b) => b - a);
 
   return (

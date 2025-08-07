@@ -50,9 +50,6 @@ export default function PublicationList({
                 <td className="px-6 py-4 whitespace-nowrap">
                   <div className="text-sm text-gray-900">{pub.authors}</div>
                 </td>
-                <td className="px-6 py-4">
-                  <div className="text-sm text-gray-500">{pub.venue}</div>
-                </td>
               </tr>
             ))}
           </tbody>

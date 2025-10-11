@@ -44,7 +44,7 @@ export type Publication = {
 export type Project = {
   id: number;
   title: string;
-  data: string[];
+  data?: string[];
   description: string;
   technologies?: string[];
   imageUrl?: string;

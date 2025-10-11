@@ -44,6 +44,7 @@ export const PEOPLE: Person[] = [
     role: "Director",
     email: "andrewlin@ncu.edu.tw",
     category: "director",
+    research: "Computer Vision, Machine Learning, Deep Learning, Image Processing, Big Data Analysis, Surveillance Systems",
     description:
       "Prof. Chih-Yang Lin is a professor in the Department of Mechanical Engineering at National Central University in Taoyuan, Taiwan. He earned his PhD in Computer Science & Information Engineering from National Chung Cheng University and is recognized as an IET Fellow and IEEE Senior Member. With a wealth of experience, he has authored or co-authored over 100 papers in highly-cited international conferences and journals, and has received numerous Best Paper Awards from renowned international conferences. In addition to his research pursuits, Dr. Lin has also played an active role in the academic community as a session chair, publication chair, and organizer for various international conferences. His research interests include computer vision, machine learning, deep learning, image processing, big data analysis, and the design of surveillance systems.​",
   },
@@ -53,6 +54,7 @@ export const PEOPLE: Person[] = [
     role: "Postdoctoral Researcher",
     email: "isackfarady@ncu.edu.tw",
     category: "faculty",
+    research: "Computer Vision, Seismic Image Processing, Core Data Analysis",
     description:
       "Isack Farady received his Ph.D. from Yuan Ze University, Taiwan, in 2023. He continues his research with Professor Chih-Yang Lin, working as a postdoctoral researcher at the CVIT Lab, National Central University, Taiwan. His current research focuses on computer vision, seismic image processing and core data analysis.",
   },
@@ -62,6 +64,7 @@ export const PEOPLE: Person[] = [
     role: "PhD Student",
     email: "112383601@cc.ncu.edu.tw",
     category: "phd",
+    research: "Computer Vision, Deep Learning, Pattern Recognition",
     description:
       "Junaidul Islam received his Bsc IT degree from S. P. college (University of Kashmir) (2020), India and  Msc IT(AI and ML)  degree from Garden City University, Bangalore, India (2022). He started Ph.D degree in 2022 under supervision of Professor Chih-Yang Lin for computer vision and deep learning fields with a fully-funded scholarship from the Department of Mechanical Engineering, National Central University, Taoyuan, Taiwan.  ",
   },
@@ -71,6 +74,7 @@ export const PEOPLE: Person[] = [
     role: "PhD Student",
     email: "113383602@cc.ncu.edu.tw",
     category: "phd",
+    research: "Computer Vision, Deep Learning, Neural Networks, AI Systems",
     description:
       "Elvin Nur Furqan received his Bachelor of Engineering in Computer Engineering from Telkom University, Indonesia, in 2021. He then worked as an AI-HPC System Engineer at Novaglobal Pte. Ltd. in Singapore for one year. In 2024, he earned his Master of Science in Electrical Engineering with a focus on Computer Vision from Yuan Ze University, Taiwan. Currently, he is pursuing a PhD, starting in 2024, under the supervision of Professor Chih-Yang Lin in the field of computer vision and deep learning, supported by a fully funded scholarship from the Department of Mechanical Engineering, National Central University, Taiwan. He also achieved 3rd place in the National Data Engineer Indonesia competition by Bisa.AI in 2020.",
   },

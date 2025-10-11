@@ -18,6 +18,7 @@ export default function ProjectsPage() {
             "Semantic Segmentation",
             "3D Reconstruction",
           ],
+          imageUrl: "/images/about/e1.png",
         },
         {
           id: 102,
@@ -29,6 +30,7 @@ export default function ProjectsPage() {
             "Spatio-temporal Features",
             "Transfer Learning",
           ],
+          imageUrl: "/images/about/e2.png",
         },
         {
           id: 103,
@@ -40,6 +42,7 @@ export default function ProjectsPage() {
             "Image Registration",
             "Pathology Detection",
           ],
+          imageUrl: "/images/about/e3.png",
         },
       ],
     },
@@ -59,6 +62,7 @@ export default function ProjectsPage() {
             "Prototypical Networks",
             "Metric Learning",
           ],
+          imageUrl: "/images/about/e4.png",
         },
         {
           id: 202,
@@ -70,6 +74,7 @@ export default function ProjectsPage() {
             "SHAP Values",
             "Layer-wise Relevance Propagation",
           ],
+          imageUrl: "/images/projects/robot.png",
         },
       ],
     },
@@ -89,6 +94,7 @@ export default function ProjectsPage() {
             "Importance Scoring",
             "Reinforcement Learning",
           ],
+          imageUrl: "/images/about/e1.png",
         },
         {
           id: 302,
@@ -100,6 +106,7 @@ export default function ProjectsPage() {
             "Transformer Networks",
             "Contrastive Learning",
           ],
+          imageUrl: "/images/about/e2.png",
         },
       ],
     },
@@ -118,6 +125,7 @@ export default function ProjectsPage() {
             "Vegetation Indices",
             "Anomaly Detection",
           ],
+          imageUrl: "/images/about/e3.png",
         },
         {
           id: 402,
@@ -129,6 +137,7 @@ export default function ProjectsPage() {
             "Trajectory Analysis",
             "Real-time Processing",
           ],
+          imageUrl: "/images/about/e4.png",
         },
       ],
     },
@@ -159,6 +168,7 @@ export default function ProjectsPage() {
       description:
         "Developing advanced GAN architectures for high-fidelity image generation and manipulation.",
       technologies: ["StyleGAN", "Diffusion Models", "Neural Rendering"],
+      imageUrl: "/images/projects/robot.png",
     },
     {
       id: 2,
@@ -184,121 +194,133 @@ export default function ProjectsPage() {
       description:
         "Vision-based navigation system for autonomous vehicles in complex urban environments.",
       technologies: ["SLAM", "Depth Estimation", "Path Planning"],
+      imageUrl: "/images/about/e2.png",
     },
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
+    <section className="py-20 bg-gradient-to-b from-transparent to-black/50 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Research Projects
-          </h1>
-          <p className="text-xl text-justify text-gray-600 max-w-3xl mx-auto">
-            The research projects conducted at the CVIT Lab have been supported
-            through various funding sources and carried out in collaboration
-            with several partner universities. These partnerships and financial
-            contributions have played a vital role in advancing the lab&apos;s
-            research objectives and fostering interdisciplinary innovation.
-          </p>
+        {/* Hero Section */}
+        <div className="mb-20">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 backdrop-blur-sm mb-6">
+              <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse mr-2"></span>
+              <span className="text-cyan-400 text-sm font-mono">Research Projects</span>
+            </div>
+            
+            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 font-orbitron">
+              Research <span className="gradient-text">Projects</span>
+            </h1>
+            
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              The research projects conducted at the CVIT Lab have been supported
+              through various funding sources and carried out in collaboration
+              with several partner universities. These partnerships and financial
+              contributions have played a vital role in advancing the lab&apos;s
+              research objectives and fostering interdisciplinary innovation.
+            </p>
+          </div>
         </div>
 
         {/* Featured Projects */}
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200">
-            Featured Projects
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {featuredProjects.map((project) => (
-              <ProjectCard
-                key={project.id}
-                project={project}
-                isFeatured={true}
-              />
+        <div className="mb-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 font-orbitron">
+              Featured <span className="gradient-text">Projects</span>
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {featuredProjects.map((project, index) => (
+              <div key={project.id} className="slide-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
+                <ProjectCard
+                  project={project}
+                  isFeatured={true}
+                />
+              </div>
             ))}
           </div>
         </div>
 
-        {/* All Projects by Category */}
-        {/* <div className="space-y-16">
-          {projectCategories.map((category) => (
-            <div
-              key={category.id}
-              className="bg-white rounded-xl shadow-lg p-6 md:p-8"
-            >
-              <div className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                  {category.title}
-                </h2>
-                <p className="text-gray-600">{category.description}</p>
-              </div>
+        {/* Project Categories */}
+        <div className="space-y-16 mb-20">
+          {projectCategories.map((category, categoryIndex) => (
+            <div key={category.id} className="slide-in-up" style={{ animationDelay: `${categoryIndex * 0.1}s` }}>
+              <div className="card">
+                <div className="mb-8">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+                      <svg className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                      </svg>
+                    </div>
+                    <h2 className="text-3xl font-bold text-white font-orbitron">
+                      {category.title}
+                    </h2>
+                  </div>
+                  <p className="text-xl text-gray-300">{category.description}</p>
+                </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {category.projects.map((project) => (
-                  <ProjectCard key={project.id} project={project} />
-                ))}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {category.projects.map((project, projectIndex) => (
+                    <div key={project.id} className="slide-in-up" style={{ animationDelay: `${projectIndex * 0.1}s` }}>
+                      <ProjectCard project={project} />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
-        </div> */}
-
-        {/* Collaborations Section */}
-        {/* <div className="mt-16 bg-blue-50 rounded-xl shadow-lg p-8">
-          <h2 className="text-2xl font-bold mb-6">
-            Collaborations & Partnerships
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
-            <div className="bg-white p-6 rounded-lg flex items-center justify-center h-32">
-              <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-full" />
-            </div>
-            <div className="bg-white p-6 rounded-lg flex items-center justify-center h-32">
-              <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-full" />
-            </div>
-            <div className="bg-white p-6 rounded-lg flex items-center justify-center h-32">
-              <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-full" />
-            </div>
-            <div className="bg-white p-6 rounded-lg flex items-center justify-center h-32">
-              <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-full" />
-            </div>
-          </div>
-          <div className="mt-8 text-center">
-            <button className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50">
-              View All Collaborators
-            </button>
-          </div>
-        </div> */}
+        </div>
 
         {/* Project Proposal CTA */}
-        <div className="mt-16 grid md:grid-cols-2 gap-8 items-center bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 text-white">
-          <div>
-            <h2 className="text-2xl font-bold mb-4">Have a Project Idea?</h2>
-            <p className="mb-6">
-              We&apos;re always interested in exploring new collaborations and
-              research opportunities. Contact us to discuss potential projects.
-            </p>
-            <a
-              href="/contact"
-              className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50"
-            >
-              Propose a Project
-            </a>
-          </div>
-          <div className="flex justify-center">
-            <div className="bg-blue-600 bg-opacity-20 rounded-full p-8">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-24 w-24"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+        <div className="card">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mb-6">
+                <svg className="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                </svg>
+              </div>
+              
+              <h2 className="text-3xl font-bold text-white mb-4 font-orbitron">Have a Project Idea?</h2>
+              <p className="text-xl text-gray-300 mb-6">
+                We&apos;re always interested in exploring new collaborations and
+                research opportunities. Contact us to discuss potential projects.
+              </p>
+              
+              <a
+                href="/contact"
+                className="btn-primary group"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
-                />
-              </svg>
+                <span>Propose a Project</span>
+                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+            
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-full blur-3xl"></div>
+                <div className="relative w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full flex items-center justify-center border border-cyan-500/30 backdrop-blur-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-16 w-16 text-cyan-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+                    />
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
         </div>

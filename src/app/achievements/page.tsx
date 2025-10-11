@@ -959,43 +959,132 @@ export default function AchievementsPage() {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
+    <section className="py-20 bg-gradient-to-b from-transparent to-black/50 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Achievements
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Recognizing excellence in research and innovation
-          </p>
+        {/* Hero Section */}
+        <div className="mb-20">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 backdrop-blur-sm mb-6">
+              <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse mr-2"></span>
+              <span className="text-cyan-400 text-sm font-mono">Achievements</span>
+            </div>
+            
+            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 font-orbitron">
+              <span className="gradient-text">Achievements</span>
+            </h1>
+            
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Recognizing excellence in research and innovation
+            </p>
+          </div>
         </div>
 
         {/* Achievement Categories */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {achievementCategories.map((category) => (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
+          {achievementCategories.map((category, index) => (
             <div
               key={category.id}
-              className="bg-white rounded-xl shadow-lg p-6"
+              className="card slide-in-up"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="flex items-center mb-6">
-                <div className="bg-blue-100 p-3 rounded-lg mr-4 text-blue-600">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mr-4 text-black">
                   {category.icon}
                 </div>
-                <h2 className="md:text-2xl font-bold text-primary">
+                <h2 className="text-2xl font-bold text-white font-orbitron">
                   {category.title}
                 </h2>
               </div>
 
-              <div className="space-y-4">
-                {category.achievements.map((achievement) => (
-                  <AchievementCard
-                    key={achievement.id}
-                    achievement={achievement}
-                  />
+              <div className="space-y-4 max-h-96 overflow-y-auto custom-scrollbar">
+                {category.achievements.map((achievement, achievementIndex) => (
+                  <div key={achievement.id} className="slide-in-up" style={{ animationDelay: `${achievementIndex * 0.05}s` }}>
+                    <AchievementCard achievement={achievement} />
+                  </div>
                 ))}
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Milestones Timeline */}
+        <div className="mb-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 font-orbitron">
+              Lab <span className="gradient-text">Milestones</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Key moments in our journey of excellence
+            </p>
+          </div>
+
+          <div className="card">
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-500 to-blue-500"></div>
+              
+              <div className="space-y-8">
+                {milestones.map((milestone, index) => (
+                  <div key={milestone.year} className="relative flex items-start slide-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
+                    {/* Timeline dot */}
+                    <div className="absolute left-6 w-4 h-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full border-2 border-white shadow-lg"></div>
+                    
+                    {/* Content */}
+                    <div className="ml-16">
+                      <div className="flex items-center mb-2">
+                        <span className="text-2xl font-bold text-cyan-400 font-orbitron mr-4">{milestone.year}</span>
+                        <h3 className="text-xl font-bold text-white font-orbitron">{milestone.title}</h3>
+                      </div>
+                      <p className="text-gray-300">{milestone.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Stats Section */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="card text-center group hover:scale-105 transition-all duration-300">
+            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <svg className="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h3 className="text-3xl font-bold text-white mb-2 font-orbitron">100+</h3>
+            <p className="text-gray-300">Publications</p>
+          </div>
+
+          <div className="card text-center group hover:scale-105 transition-all duration-300">
+            <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <svg className="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+              </svg>
+            </div>
+            <h3 className="text-3xl font-bold text-white mb-2 font-orbitron">50+</h3>
+            <p className="text-gray-300">Awards</p>
+          </div>
+
+          <div className="card text-center group hover:scale-105 transition-all duration-300">
+            <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <svg className="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+              </svg>
+            </div>
+            <h3 className="text-3xl font-bold text-white mb-2 font-orbitron">200+</h3>
+            <p className="text-gray-300">Students</p>
+          </div>
+
+          <div className="card text-center group hover:scale-105 transition-all duration-300">
+            <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <svg className="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
+            </div>
+            <h3 className="text-3xl font-bold text-white mb-2 font-orbitron">30+</h3>
+            <p className="text-gray-300">Projects</p>
+          </div>
         </div>
       </div>
     </section>

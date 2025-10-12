@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Lab Info */}
           <div className="md:col-span-1">
             <div className="mb-6">
-              <div className="relative w-48 h-20">
+              <div className="relative w-56 h-24">
                 <Image fill src="/logo.avif" alt="CVIT Lab" className="object-contain filter drop-shadow-lg" />
               </div>
             </div>
@@ -130,15 +130,9 @@ export default function Footer() {
 
         {/* Bottom Section */}
         <div className="border-t border-gray-700/50 mt-16 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-center md:text-left mb-4 md:mb-0">
+            <p className="text-gray-400 text-center md:text-left mb-4 md:mb-0 mx-auto w-fit">
               © {currentYear} CVIT Lab. All rights reserved. | National Central University
             </p>
-            <div className="flex items-center space-x-2 text-gray-400 text-sm">
-              <span>Powered by</span>
-              <span className="text-cyan-400 font-mono">AI & Computer Vision</span>
-            </div>
-          </div>
         </div>
       </div>
     </footer>

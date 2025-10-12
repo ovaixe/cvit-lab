@@ -165,7 +165,7 @@ export default function PersonCard({ person, variant }: PersonCardProps) {
           {isDirector() && (
             <div className="absolute bottom-4 left-4">
               <div className="px-3 py-1 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full backdrop-blur-sm">
-                <span className="text-purple-400 text-xs font-mono font-bold">DIRECTOR</span>
+                <span className="text-purple-500 text-xs font-mono font-bold">DIRECTOR</span>
               </div>
             </div>
           )}

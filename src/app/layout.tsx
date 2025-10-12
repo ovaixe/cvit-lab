@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins, Geist_Mono, Orbitron } from "next/font/google";
 import "./globals.css";
 
@@ -28,7 +28,11 @@ export const metadata: Metadata = {
   description: "Advanced Computer Vision and Interactive Technology Laboratory at National Central University",
   keywords: "computer vision, AI, machine learning, deep learning, research, Taiwan, NCU",
   authors: [{ name: "CVIT Lab" }],
-  viewport: "width=device-width, initial-scale=1",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

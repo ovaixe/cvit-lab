@@ -18,36 +18,55 @@ type PersonCardProps = {
 export default function PersonCard({ person, variant }: PersonCardProps) {
   const [imageError, setImageError] = useState(false);
   
-  const isFaculty = () => {
-    return variant === "faculty" || variant === "director" || variant === "phd";
-  };
-
-  const isPhD = () => {
-    return variant === "phd";
-  };
-
-  const isDirector = () => {
-    return variant === "director";
-  };
-
-  const getVariantColor = () => {
-    switch (variant) {
-      case "director":
-        return "from-purple-500 to-pink-500";
-      case "faculty":
-        return "from-cyan-500 to-blue-500";
-      case "phd":
-        return "from-green-500 to-teal-500";
-      case "ms":
-        return "from-orange-500 to-red-500";
-      case "phdg":
-      case "msg":
-      case "alumni":
-        return "from-gray-500 to-gray-600";
-      default:
-        return "from-cyan-500 to-blue-500";
+  // Predefined class objects to avoid hydration mismatches
+  const variantClasses = {
+    director: {
+      glow: "bg-gradient-to-r from-purple-500/30 to-pink-500/30",
+      container: "bg-gradient-to-br from-purple-500/15 to-pink-500/15 border-purple-500/30",
+      dot: "bg-gradient-to-r from-purple-500 to-pink-500",
+      research: "bg-gradient-to-r from-purple-500/15 to-pink-500/15 border-purple-500/30",
+      researchText: "text-purple-400",
+      icon: "from-purple-500 to-pink-500"
+    },
+    faculty: {
+      glow: "bg-gradient-to-r from-cyan-500/30 to-blue-500/30",
+      container: "bg-gradient-to-br from-cyan-500/15 to-blue-500/15 border-cyan-500/30",
+      dot: "bg-gradient-to-r from-cyan-500 to-blue-500",
+      research: "bg-gradient-to-r from-cyan-500/15 to-blue-500/15 border-cyan-500/30",
+      researchText: "text-cyan-400",
+      icon: "from-cyan-500 to-blue-500"
+    },
+    phd: {
+      glow: "bg-gradient-to-r from-green-500/30 to-teal-500/30",
+      container: "bg-gradient-to-br from-green-500/15 to-teal-500/15 border-green-500/30",
+      dot: "bg-gradient-to-r from-green-500 to-teal-500",
+      research: "bg-gradient-to-r from-green-500/15 to-teal-500/15 border-green-500/30",
+      researchText: "text-green-400",
+      icon: "from-green-500 to-teal-500"
+    },
+    ms: {
+      glow: "bg-gradient-to-r from-orange-500/30 to-red-500/30",
+      container: "bg-gradient-to-br from-orange-500/15 to-red-500/15 border-orange-500/30",
+      dot: "bg-gradient-to-r from-orange-500 to-red-500",
+      research: "bg-gradient-to-r from-orange-500/15 to-red-500/15 border-orange-500/30",
+      researchText: "text-orange-400",
+      icon: "from-orange-500 to-red-500"
+    },
+    default: {
+      glow: "bg-gradient-to-r from-cyan-500/20 to-blue-500/20",
+      container: "bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-cyan-500/20",
+      dot: "bg-gradient-to-r from-cyan-500 to-blue-500",
+      research: "bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-cyan-500/20",
+      researchText: "text-cyan-400",
+      icon: "from-cyan-500 to-blue-500"
     }
   };
+
+  const currentVariant = variantClasses[variant as keyof typeof variantClasses] || variantClasses.default;
+  
+  const isFaculty = variant === "faculty" || variant === "director" || variant === "phd";
+  const isPhD = variant === "phd";
+  const isDirector = variant === "director";
 
   const getVariantIcon = () => {
     switch (variant) {
@@ -87,32 +106,22 @@ export default function PersonCard({ person, variant }: PersonCardProps) {
   return (
     <div
       className={`card hover:scale-105 transition-all duration-300 group ${
-        isFaculty() ? "max-w-2xl w-full" : "h-full min-w-60"
+        isFaculty ? "max-w-2xl w-full" : "h-full min-w-60"
       }`}
     >
       <div
-        className={`flex ${isFaculty() ? "flex-col md:flex-row" : "flex-col"}`}
+        className={`flex ${isFaculty ? "flex-col md:flex-row" : "flex-col"}`}
       >
         {/* Image */}
         <div
           className={`relative group/image ${
-            isFaculty() ? "w-full h-96 md:w-60 md:h-60 flex-shrink-0" : "w-full h-48"
+            isFaculty ? "w-full h-96 md:w-60 md:h-60 flex-shrink-0" : "w-full h-48"
           }`}
         >
           {/* Special glow effect for faculty and PhD students */}
-          <div className={`absolute inset-0 rounded-xl blur-sm group-hover/image:blur-md transition-all duration-300 ${
-            isDirector() ? "bg-gradient-to-r from-purple-500/30 to-pink-500/30" :
-            isPhD() ? "bg-gradient-to-r from-green-500/30 to-teal-500/30" :
-            variant === "faculty" ? "bg-gradient-to-r from-cyan-500/30 to-blue-500/30" :
-            "bg-gradient-to-r from-cyan-500/20 to-blue-500/20"
-          }`}></div>
+          <div className={`absolute inset-0 rounded-xl blur-sm group-hover/image:blur-md transition-all duration-300 ${currentVariant.glow}`}></div>
           
-          <div className={`relative w-full h-full rounded-xl border overflow-hidden ${
-            isDirector() ? "bg-gradient-to-br from-purple-500/15 to-pink-500/15 border-purple-500/30" :
-            isPhD() ? "bg-gradient-to-br from-green-500/15 to-teal-500/15 border-green-500/30" :
-            variant === "faculty" ? "bg-gradient-to-br from-cyan-500/15 to-blue-500/15 border-cyan-500/30" :
-            "bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-cyan-500/20"
-          }`}>
+          <div className={`relative w-full h-full rounded-xl border overflow-hidden ${currentVariant.container}`}>
             {!imageError ? (
               // Using img instead of Next.js Image component for better compatibility and error handling
               <img
@@ -127,7 +136,7 @@ export default function PersonCard({ person, variant }: PersonCardProps) {
             ) : (
               <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-600/20 to-gray-700/20">
                 <div className="text-center">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${getVariantColor()} rounded-full flex items-center justify-center mx-auto mb-2`}>
+                  <div className={`w-16 h-16 bg-gradient-to-r ${currentVariant.icon} rounded-full flex items-center justify-center mx-auto mb-2`}>
                     <svg className="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                     </svg>
@@ -140,9 +149,9 @@ export default function PersonCard({ person, variant }: PersonCardProps) {
           
           {/* Enhanced Role Badge */}
           <div className="absolute top-4 right-4">
-            <div className={`w-10 h-10 bg-gradient-to-r ${getVariantColor()} rounded-full flex items-center justify-center shadow-lg ${
-              isDirector() ? "ring-2 ring-purple-400/50" :
-              isPhD() ? "ring-2 ring-green-400/50" :
+            <div className={`w-10 h-10 bg-gradient-to-r ${currentVariant.icon} rounded-full flex items-center justify-center shadow-lg ${
+              isDirector ? "ring-2 ring-purple-400/50" :
+              isPhD ? "ring-2 ring-green-400/50" :
               variant === "faculty" ? "ring-2 ring-cyan-400/50" :
               ""
             }`}>
@@ -151,7 +160,7 @@ export default function PersonCard({ person, variant }: PersonCardProps) {
           </div>
 
           {/* Special indicator for PhD students */}
-          {isPhD() && (
+          {isPhD && (
             <div className="absolute top-4 left-4">
               <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center shadow-lg">
                 <svg className="h-3 w-3 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -162,7 +171,7 @@ export default function PersonCard({ person, variant }: PersonCardProps) {
           )}
 
           {/* Special indicator for director */}
-          {isDirector() && (
+          {isDirector && (
             <div className="absolute bottom-4 left-4">
               <div className="px-3 py-1 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full backdrop-blur-sm">
                 <span className="text-purple-500 text-xs font-mono font-bold">DIRECTOR</span>
@@ -175,16 +184,16 @@ export default function PersonCard({ person, variant }: PersonCardProps) {
         <div className="p-6 flex-1">
           <div>
             <h3 className={`font-bold text-white group-hover:text-cyan-400 transition-colors font-orbitron mb-2 ${
-              isDirector() ? "text-2xl" : isPhD() ? "text-xl" : "text-xl"
+              isDirector ? "text-2xl" : isPhD ? "text-xl" : "text-xl"
             }`}>
               {person.name}
             </h3>
             <div className="flex items-center mb-3">
-              <div className={`w-2 h-2 bg-gradient-to-r ${getVariantColor()} rounded-full mr-2 ${
-                isDirector() ? "w-3 h-3" : ""
+              <div className={`w-2 h-2 bg-gradient-to-r ${currentVariant.dot} rounded-full mr-2 ${
+                isDirector ? "w-3 h-3" : ""
               }`}></div>
               <p className={`text-gray-300 font-medium ${
-                isDirector() ? "text-lg" : ""
+                isDirector ? "text-lg" : ""
               }`}>{person.role}</p>
             </div>
 
@@ -198,18 +207,8 @@ export default function PersonCard({ person, variant }: PersonCardProps) {
             )}
 
             {person.research && (
-              <div className={`mb-4 p-3 rounded-lg border ${
-                isDirector() ? "bg-gradient-to-r from-purple-500/15 to-pink-500/15 border-purple-500/30" :
-                isPhD() ? "bg-gradient-to-r from-green-500/15 to-teal-500/15 border-green-500/30" :
-                variant === "faculty" ? "bg-gradient-to-r from-cyan-500/15 to-blue-500/15 border-cyan-500/30" :
-                "bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-cyan-500/20"
-              }`}>
-                <p className={`text-sm font-medium mb-1 font-orbitron ${
-                  isDirector() ? "text-purple-400" :
-                  isPhD() ? "text-green-400" :
-                  variant === "faculty" ? "text-cyan-400" :
-                  "text-cyan-400"
-                }`}>Research Focus:</p>
+              <div className={`mb-4 p-3 rounded-lg border ${currentVariant.research}`}>
+                <p className={`text-sm font-medium mb-1 font-orbitron ${currentVariant.researchText}`}>Research Focus:</p>
                 <p className="text-gray-300 text-sm leading-relaxed">{person.research}</p>
               </div>
             )}

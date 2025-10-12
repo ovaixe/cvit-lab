@@ -6,9 +6,29 @@ import { useEffect, useState } from "react";
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
+  const [particles, setParticles] = useState<Array<{left: string, top: string, delay: string, duration: string}>>([]);
+  const [dataStreams, setDataStreams] = useState<Array<{left: string, top: string, delay: string, duration: string}>>([]);
 
   useEffect(() => {
     setIsVisible(true);
+    
+    // Generate particles on client side only
+    const generatedParticles = [...Array(20)].map(() => ({
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      delay: `${Math.random() * 3}s`,
+      duration: `${2 + Math.random() * 2}s`,
+    }));
+    
+    const generatedDataStreams = [...Array(8)].map((_, i) => ({
+      left: `${20 + i * 10}%`,
+      top: `${Math.random() * 80}%`,
+      delay: `${i * 0.2}s`,
+      duration: `${2 + Math.random() * 2}s`,
+    }));
+    
+    setParticles(generatedParticles);
+    setDataStreams(generatedDataStreams);
   }, []);
 
   return (
@@ -21,15 +41,15 @@ export default function Hero() {
         <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         
         {/* Floating Particles */}
-        {[...Array(20)].map((_, i) => (
+        {particles.map((particle, i) => (
           <div
             key={i}
             className="absolute w-2 h-2 bg-cyan-400/30 rounded-full animate-pulse"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${2 + Math.random() * 2}s`,
+              left: particle.left,
+              top: particle.top,
+              animationDelay: particle.delay,
+              animationDuration: particle.duration,
             }}
           ></div>
         ))}
@@ -128,15 +148,15 @@ export default function Hero() {
               
               {/* Data Streams */}
               <div className="absolute inset-0 pointer-events-none">
-                {[...Array(8)].map((_, i) => (
+                {dataStreams.map((stream, i) => (
                   <div
                     key={i}
                     className="absolute w-1 h-20 bg-gradient-to-b from-cyan-400 to-transparent opacity-60 animate-pulse"
                     style={{
-                      left: `${20 + i * 10}%`,
-                      top: `${Math.random() * 80}%`,
-                      animationDelay: `${i * 0.2}s`,
-                      animationDuration: `${2 + Math.random() * 2}s`,
+                      left: stream.left,
+                      top: stream.top,
+                      animationDelay: stream.delay,
+                      animationDuration: stream.duration,
                     }}
                   ></div>
                 ))}

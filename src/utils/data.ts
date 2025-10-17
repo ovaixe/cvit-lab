@@ -16,24 +16,28 @@ export const RESEARCH_AREAS: ResearchArea[] = [
     title: "Automated Optical Inspection",
     description:
       "Automated Optical Inspection (AOI) has become a powerful solution in the steel making industry. AOI techniques are used  to inspect the surfaces of objects to reduce defective products with high precision and speed. In the inspection process, an AOI device acquires image of the object under inspection using an optical imaging system, and then identifies the type of defects by matching the input image with known template. Recently, deep learning has becoming a powerful solution for industrial inspection applications. In particular, deep learning-based object detection techniques are used to improve the speed and accuracy of an AOI device.",
+    link: "#"
   },
   {
     id: 2,
     title: "Multimedia Security",
     description:
       "With the development of web and digital products, camera devices including surveillance and digital cameras are widely used. However, there are public concerns on the confidentiality and security in data storage. There are multiple cases of stealth involving multimedia data stored online which are then distributed with malicious intention, which raise the public's awareness of privacy and how personal information is being stored and used. While privacy is important, surveillance cameras can help us monitor, providing social security or proofs for legal judgement. Thus, the ways to monitor and also preserve the privacy in real-time systems are the foci of our research in this field, most notably image encryption and digital rights management.",
+    link: "#"
   },
   {
     id: 3,
     title: "Video Surveillance",
     description:
       "Surveillance system is important in providing security and constant observation of locations to obtain information when needed. Over the years, various techniques in this field has been developed, such as recognition, identification, tracking, counting, authentication and so on. The challenges arose from developing these techniques are related to the quality of the video and issues that might affect how computer views the video, such as low resolution, obtrusion, moving objects and feature identifications. In this field, our research focuses on obtaining higher accuracy  in video surveillance to achieve multiple purposes, such as identifying while tracking moving objects without being affected by obtrusion. Additionally, we aim to achieve alternative practical applications of these techniques in other fields, such as human relationship mapping and unmanned store maintenance for robots.",
+    link: "#"
   },
   {
     id: 4,
     title: "Computer Vision & Image Processing",
     description:
       "Using computers in processing various images have been in the world for decades. With the ability for computer to understand complex features to achieve purpose, it has developed to complete difficult image professing, such as Deepfake and even manages to create special artworks made by AI. While Computer Vision & Image Processing has its artistic side, our lab focuses on relevant research which leans towards applications in the industry or practicality in every aspects of life. The field of this research is not limited to creating new image, but allows the computer to understand and execute necessary actions for specific intentions",
+    link: "#"
   },
 ];
 

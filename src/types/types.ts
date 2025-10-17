@@ -7,6 +7,7 @@ export type ResearchArea = {
   id: number;
   title: string;
   description: string;
+  link: string;
 };
 
 export type Person = {
@@ -15,6 +16,7 @@ export type Person = {
   role: string;
   email: string;
   category: "director" | "faculty" | "phd" | "ms" | "phdg" | "msg" | "alumni";
+  research?: string;
   description?: string;
 };
 

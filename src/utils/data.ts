@@ -1,4 +1,10 @@
-import { NavItem, ResearchArea, Person, Publication } from "@/types/types";
+import {
+  NavItem,
+  ResearchArea,
+  Person,
+  Publication,
+  ResearchDetail,
+} from "@/types/types";
 
 export const NAV_ITEMS: NavItem[] = [
   { title: "About", href: "/about" },
@@ -13,31 +19,31 @@ export const NAV_ITEMS: NavItem[] = [
 export const RESEARCH_AREAS: ResearchArea[] = [
   {
     id: 1,
-    title: "Automated Optical Inspection",
+    title: "Deep Learning and Image Processing",
     description:
-      "Automated Optical Inspection (AOI) has become a powerful solution in the steel making industry. AOI techniques are used  to inspect the surfaces of objects to reduce defective products with high precision and speed. In the inspection process, an AOI device acquires image of the object under inspection using an optical imaging system, and then identifies the type of defects by matching the input image with known template. Recently, deep learning has becoming a powerful solution for industrial inspection applications. In particular, deep learning-based object detection techniques are used to improve the speed and accuracy of an AOI device.",
-    link: "#"
+      "Enhancing the security of deep learning models, Improving medical image diagnosis with reliable and trusted results and AI in Industrial applications to make better solutions of crucial problems.",
+    link: "/research/1",
   },
   {
     id: 2,
-    title: "Multimedia Security",
+    title: "Intelligent Energy Management",
     description:
-      "With the development of web and digital products, camera devices including surveillance and digital cameras are widely used. However, there are public concerns on the confidentiality and security in data storage. There are multiple cases of stealth involving multimedia data stored online which are then distributed with malicious intention, which raise the public's awareness of privacy and how personal information is being stored and used. While privacy is important, surveillance cameras can help us monitor, providing social security or proofs for legal judgement. Thus, the ways to monitor and also preserve the privacy in real-time systems are the foci of our research in this field, most notably image encryption and digital rights management.",
-    link: "#"
+      "Developing intelligent energy management systems for smart homes and buildings to reduce energy consumption and improve energy efficiency.",
+    link: "/research/2",
   },
   {
     id: 3,
-    title: "Video Surveillance",
+    title: "Robot Vision and Autonomous Systems",
     description:
-      "Surveillance system is important in providing security and constant observation of locations to obtain information when needed. Over the years, various techniques in this field has been developed, such as recognition, identification, tracking, counting, authentication and so on. The challenges arose from developing these techniques are related to the quality of the video and issues that might affect how computer views the video, such as low resolution, obtrusion, moving objects and feature identifications. In this field, our research focuses on obtaining higher accuracy  in video surveillance to achieve multiple purposes, such as identifying while tracking moving objects without being affected by obtrusion. Additionally, we aim to achieve alternative practical applications of these techniques in other fields, such as human relationship mapping and unmanned store maintenance for robots.",
-    link: "#"
+      "Developing robot vision and autonomous systems for robots to navigate and interact with the environment.",
+    link: "/research/3",
   },
   {
     id: 4,
-    title: "Computer Vision & Image Processing",
+    title: "WiFi Sensing and Perception",
     description:
-      "Using computers in processing various images have been in the world for decades. With the ability for computer to understand complex features to achieve purpose, it has developed to complete difficult image professing, such as Deepfake and even manages to create special artworks made by AI. While Computer Vision & Image Processing has its artistic side, our lab focuses on relevant research which leans towards applications in the industry or practicality in every aspects of life. The field of this research is not limited to creating new image, but allows the computer to understand and execute necessary actions for specific intentions",
-    link: "#"
+      "Developing wifi sensing and perception systems for smart homes and buildings to improve energy efficiency and reduce energy consumption.",
+    link: "/research/4",
   },
 ];
 
@@ -48,7 +54,8 @@ export const PEOPLE: Person[] = [
     role: "Director",
     email: "andrewlin@ncu.edu.tw",
     category: "director",
-    research: "Computer Vision, Machine Learning, Deep Learning, Image Processing, Big Data Analysis, Surveillance Systems",
+    research:
+      "Computer Vision, Machine Learning, Deep Learning, Image Processing, Big Data Analysis, Surveillance Systems",
     description:
       "Prof. Chih-Yang Lin is a professor in the Department of Mechanical Engineering at National Central University in Taoyuan, Taiwan. He earned his PhD in Computer Science & Information Engineering from National Chung Cheng University and is recognized as an IET Fellow and IEEE Senior Member. With a wealth of experience, he has authored or co-authored over 100 papers in highly-cited international conferences and journals, and has received numerous Best Paper Awards from renowned international conferences. In addition to his research pursuits, Dr. Lin has also played an active role in the academic community as a session chair, publication chair, and organizer for various international conferences. His research interests include computer vision, machine learning, deep learning, image processing, big data analysis, and the design of surveillance systems.​",
   },
@@ -3137,4 +3144,613 @@ export const NEWS_ITEMS = [
       "Congratulations to Professor Chih-Yang Lin for receiving the 2021 CECE_YZU Outstanding Research Award!",
     category: "Awards",
   },
+];
+
+export const RESEARCH_DETAILS: ResearchDetail[] = [
+  {
+    id: 1,
+    title: "AI Security & Medical Image Processing",
+    description:
+      "Enhancing the security of deep learning models, Improving medical image diagnosis with reliable and trusted results and AI in Industrial applications to make better solutions of crucial problems.",
+    fullDescription:
+      "Our research in AI Security & Medical Image Processing focuses on developing robust, secure, and reliable AI systems for critical applications. We address fundamental challenges in computer vision, medical imaging, and industrial applications through innovative deep learning architectures and advanced image processing techniques. Our work spans from theoretical foundations to practical implementations that can be deployed in real-world scenarios, with particular emphasis on adversarial robustness and medical AI safety.",
+    objectives: [
+      "Develop robust AI systems resistant to adversarial attacks and data poisoning",
+      "Enhance medical image diagnosis accuracy and reliability for better patient outcomes",
+      "Create trustworthy and explainable AI systems for high-stakes medical decisions",
+      "Advance state-of-the-art techniques in computer vision and medical image processing",
+      "Build comprehensive AI safety frameworks for critical healthcare applications",
+    ],
+    methodology:
+      "We employ a multi-disciplinary approach combining deep learning, computer vision, medical imaging, and cybersecurity techniques. Our methodology includes: 1) Adversarial training and defense mechanisms for robust models, 2) Advanced image segmentation and classification algorithms, 3) Medical image enhancement and analysis techniques, 4) Industrial defect detection and quality control systems, 5) Explainable AI and model interpretability methods. Our research framework consists of three main phases: Data Collection and Preprocessing, Model Development and Training, and Evaluation and Deployment. We use state-of-the-art deep learning architectures including CNNs, Transformers, and GANs, combined with advanced image processing techniques for robust performance across diverse medical imaging modalities.",
+    keyFeatures: [
+      "AdvPatchShield: Advanced adversarial patch attack defense framework",
+      "PSIG-Net: Pseudo-sample generation for skin lesion classification",
+      "Vector Quantization for enhanced adversarial attack generation",
+      "Medical image enhancement and diagnostic assistance",
+      "Real-time image processing and analysis",
+      "Explainable AI and model interpretability for medical decisions",
+    ],
+    applications: [
+      "Medical diagnosis and healthcare imaging (dermatology, radiology, pathology)",
+      "Adversarial attack detection and defense in critical systems",
+      "Skin lesion classification and melanoma detection",
+      "Alzheimer's disease diagnosis from brain scans",
+      "Pipeline rust detection and industrial quality control",
+      "Security and surveillance systems",
+    ],
+    technologies: [
+      "PyTorch, TensorFlow, Keras",
+      "OpenCV, PIL, scikit-image",
+      "CUDA, GPU acceleration",
+      "Docker, Kubernetes",
+      "Python, C++, MATLAB",
+      "Cloud computing platforms (AWS, GCP, Azure)",
+    ],
+    publications: [
+      "AdvPatchShield: A Defense Framework Against Adversarial Patch Attacks",
+      "Vector Quantization for Enhanced Adversarial Attack Generation",
+      "PSIG-Net: Pseudo-Sample Generation for Skin Lesion Classification",
+      "Enhancing AI Reliability in Alzheimer's Disease Diagnosis",
+      "Pipeline Rust Detection and Classification using Deep Learning",
+    ],
+    teamMembers: [
+      "Prof. Chih-Yang Lin (Director)",
+      "Isack Farady (Postdoctoral Researcher)",
+      "Junaidul Islam (PhD Student)",
+      "Elvin Nur Furqon (PhD Student)",
+    ],
+    status: "ongoing",
+    startDate: "2020-01-01",
+    funding: "National Science and Technology Council (NSTC), Taiwan",
+    images: [
+      "/images/research/deep-learning-1.jpg",
+      "/images/research/medical-imaging-1.jpg",
+      "/images/research/industrial-ai-1.jpg",
+    ],
+    results: [
+      {
+        title: "Adversarial Defense Performance",
+        description:
+          "Our AdvPatchShield framework achieves state-of-the-art performance in defending against adversarial patch attacks.",
+        metrics: [
+          { label: "Detection Accuracy", value: "94.2%" },
+          { label: "False Positive Rate", value: "2.1%" },
+          { label: "Reconstruction Quality (PSNR)", value: "32.5 dB" },
+        ],
+      },
+      {
+        title: "Medical Image Classification",
+        description:
+          "Enhanced accuracy in medical image diagnosis across multiple datasets and modalities.",
+        metrics: [
+          { label: "Skin Lesion Classification", value: "96.8%" },
+          { label: "Alzheimer's Detection", value: "92.3%" },
+          { label: "Overall Diagnostic Accuracy", value: "94.7%" },
+        ],
+      },
+      {
+        title: "Industrial Applications",
+        description:
+          "Successful deployment of AI systems in industrial quality control and defect detection.",
+        metrics: [
+          { label: "Defect Detection Rate", value: "98.5%" },
+          { label: "Processing Speed", value: "45 FPS" },
+          { label: "System Reliability", value: "99.2%" },
+        ],
+      },
+    ],
+    challenges: [
+      "Balancing model accuracy with robustness against adversarial attacks",
+      "Handling limited and imbalanced medical datasets",
+      "Ensuring real-time performance in industrial applications",
+      "Maintaining model interpretability while improving performance",
+      "Cross-domain adaptation and generalization",
+    ],
+    futureWork: [
+      "Developing more sophisticated adversarial defense mechanisms",
+      "Expanding to 3D medical imaging and volumetric analysis",
+      "Integrating federated learning for privacy-preserving medical AI",
+      "Exploring quantum machine learning for enhanced security",
+      "Building comprehensive AI safety frameworks for critical applications",
+    ],
+    relatedProjects: [
+      "AI Security and Robustness",
+      "Medical Image Analysis",
+      "Industrial Computer Vision",
+      "Explainable AI Systems",
+    ],
+  },
+  {
+    id: 2,
+    title: "Intelligent Energy Management",
+    description:
+      "Developing intelligent energy management systems for smart homes and buildings to reduce energy consumption and improve energy efficiency.",
+    fullDescription:
+      "Our Intelligent Energy Management research focuses on creating smart, adaptive systems that optimize energy consumption in residential and commercial buildings. We develop AI-powered solutions that learn from user behavior, environmental conditions, and energy pricing to automatically adjust systems for maximum efficiency while maintaining comfort and functionality.",
+    objectives: [
+      "Reduce energy consumption in buildings by 20-30% through intelligent automation",
+      "Develop predictive models for energy demand and supply optimization",
+      "Create user-friendly interfaces for energy monitoring and control",
+      "Integrate renewable energy sources with traditional power systems",
+      "Implement real-time energy pricing and demand response mechanisms",
+    ],
+    methodology:
+      "We combine machine learning, IoT sensors, and building automation systems to create comprehensive energy management solutions. Our approach includes: 1) Data collection from smart meters and environmental sensors, 2) Machine learning models for demand prediction and optimization, 3) Real-time control algorithms for HVAC and lighting systems, 4) User behavior analysis and adaptive learning, 5) Integration with smart grid technologies.",
+    keyFeatures: [
+      "Real-time energy monitoring and analytics",
+      "Predictive demand forecasting",
+      "Automated HVAC and lighting control",
+      "Renewable energy integration",
+      "User behavior learning and adaptation",
+      "Mobile and web-based control interfaces",
+    ],
+    applications: [
+      "Smart homes and residential buildings",
+      "Commercial office buildings",
+      "Industrial facilities",
+      "Educational institutions",
+      "Healthcare facilities",
+      "Retail and shopping centers",
+    ],
+    technologies: [
+      "Machine Learning (TensorFlow, PyTorch)",
+      "IoT platforms (Arduino, Raspberry Pi)",
+      "Building automation protocols (BACnet, Modbus)",
+      "Cloud computing (AWS IoT, Azure IoT)",
+      "Mobile development (React Native, Flutter)",
+      "Database systems (InfluxDB, MongoDB)",
+    ],
+    publications: [
+      "Intelligent Energy Management for Smart Buildings",
+      "Machine Learning Approaches to HVAC Optimization",
+      "Renewable Energy Integration in Smart Grids",
+      "User Behavior Modeling for Energy Efficiency",
+    ],
+    teamMembers: [
+      "Prof. Chih-Yang Lin (Director)",
+      "Chen, Yi En (MS Student)",
+      "Lin, Wei Jie (MS Student)",
+    ],
+    status: "ongoing",
+    startDate: "2021-06-01",
+    funding: "Ministry of Science and Technology, Taiwan",
+    images: [
+      "/images/research/energy-management-1.jpg",
+      "/images/research/smart-building-1.jpg",
+    ],
+    results: [
+      {
+        title: "Energy Savings",
+        description:
+          "Significant reduction in energy consumption across various building types.",
+        metrics: [
+          { label: "Average Energy Savings", value: "25.3%" },
+          { label: "Peak Demand Reduction", value: "18.7%" },
+          { label: "Cost Savings", value: "22.1%" },
+        ],
+      },
+    ],
+    challenges: [
+      "Integrating diverse building systems and protocols",
+      "Ensuring user comfort while optimizing energy use",
+      "Handling varying weather conditions and seasonal changes",
+      "Managing data privacy and security in IoT systems",
+    ],
+    futureWork: [
+      "Integration with electric vehicle charging systems",
+      "Advanced grid interaction and demand response",
+      "Machine learning for predictive maintenance",
+      "Blockchain-based energy trading systems",
+    ],
+    relatedProjects: [
+      "Smart Building Automation",
+      "Renewable Energy Integration",
+      "IoT Sensor Networks",
+    ],
+    datasets: [
+      "Smart Building Energy Dataset (SBED): 1 year of energy consumption data",
+      "Occupancy Pattern Dataset (OPD): 6 months of occupancy tracking",
+      "Weather Data Integration (WDI): Historical weather patterns",
+      "Energy Price Dataset (EPD): Real-time energy pricing information"
+    ],
+    algorithms: [
+      "Predictive Energy Management (PEM): LSTM-based energy forecasting",
+      "Occupancy-based Control (OBC): Reinforcement learning for HVAC control",
+      "Energy Optimization Algorithm (EOA): Multi-objective optimization",
+      "Demand Response System (DRS): Real-time energy load balancing"
+    ],
+    experimentalSetup: {
+      hardware: [
+        "Smart meters and energy monitoring devices",
+        "IoT sensors for occupancy and environmental data",
+        "Raspberry Pi controllers for building automation",
+        "Cloud computing infrastructure for data processing"
+      ],
+      software: [
+        "Python with TensorFlow for ML models",
+        "Building Information Modeling (BIM) software",
+        "Energy management system (EMS) platform",
+        "Real-time data visualization tools"
+      ]
+    },
+    evaluationMetrics: {
+      classification: [
+        "Energy Consumption Prediction Accuracy: 94.2%",
+        "Occupancy Detection Rate: 91.8%",
+        "Energy Cost Reduction: 23.5%",
+        "System Efficiency Improvement: 18.7%"
+      ],
+      performance: [
+        "Real-time Response Time: <500ms",
+        "System Uptime: 99.5%",
+        "Energy Savings: 25-30%",
+        "User Satisfaction: 92.3%"
+      ]
+    }
+  },
+  {
+    id: 3,
+    title: "Robot Vision and Autonomous Systems",
+    description:
+      "Developing robot vision and autonomous systems for robots to navigate and interact with the environment.",
+    fullDescription:
+      "Our Robot Vision and Autonomous Systems research focuses on developing advanced computer vision and autonomous navigation systems for robots. We work on creating intelligent robots that can perceive, understand, and interact with their environment using state-of-the-art computer vision, machine learning, and robotics technologies. Our research spans from fundamental computer vision algorithms to complete autonomous systems that can operate in real-world environments.",
+    objectives: [
+      "Develop robust computer vision algorithms for robot perception",
+      "Create autonomous navigation and path planning systems",
+      "Build human-robot interaction and collaboration frameworks",
+      "Implement real-time object detection and recognition systems",
+      "Design adaptive learning algorithms for dynamic environments"
+    ],
+    methodology:
+      "We employ a comprehensive approach combining computer vision, machine learning, robotics, and sensor fusion. Our methodology includes: 1) Computer vision algorithms for object detection, tracking, and recognition, 2) Simultaneous Localization and Mapping (SLAM) for autonomous navigation, 3) Deep learning models for scene understanding and decision making, 4) Sensor fusion techniques combining cameras, LiDAR, and IMU data, 5) Real-time processing and control systems for robot operation.",
+    keyFeatures: [
+      "Real-time object detection and tracking",
+      "Autonomous navigation and path planning",
+      "Human-robot interaction and collaboration",
+      "3D scene reconstruction and understanding",
+      "Adaptive learning and decision making",
+      "Multi-sensor data fusion and processing"
+    ],
+    applications: [
+      "Autonomous mobile robots and drones",
+      "Industrial automation and manufacturing",
+      "Service robots for healthcare and elderly care",
+      "Agricultural robots and precision farming",
+      "Search and rescue operations",
+      "Space exploration and planetary rovers"
+    ],
+    technologies: [
+      "OpenCV, PCL (Point Cloud Library)",
+      "ROS (Robot Operating System)",
+      "PyTorch, TensorFlow for deep learning",
+      "CUDA for GPU acceleration",
+      "Gazebo for robot simulation",
+      "C++, Python, MATLAB"
+    ],
+    publications: [
+      "Deep Learning for Robot Vision and Navigation",
+      "SLAM-based Autonomous Robot Navigation",
+      "Human-Robot Interaction in Dynamic Environments",
+      "Multi-sensor Fusion for Robot Perception"
+    ],
+    teamMembers: [
+      "Prof. Chih-Yang Lin (Director)",
+      "Dr. Robot Vision (Postdoctoral Researcher)",
+      "AI Navigation (PhD Student)",
+      "Sensor Fusion (MS Student)"
+    ],
+    status: "ongoing",
+    startDate: "2021-01-01",
+    funding: "National Science and Technology Council (NSTC), Taiwan",
+    images: [
+      "/images/research/robot-vision-1.jpg",
+      "/images/research/autonomous-systems-1.jpg"
+    ],
+    results: [
+      {
+        title: "Navigation Performance",
+        description: "High accuracy in autonomous navigation and obstacle avoidance.",
+        metrics: [
+          { label: "Navigation Accuracy", value: "96.8%" },
+          { label: "Obstacle Avoidance", value: "94.2%" },
+          { label: "Path Planning Speed", value: "Real-time" }
+        ]
+      },
+      {
+        title: "Object Recognition",
+        description: "Advanced object detection and classification capabilities.",
+        metrics: [
+          { label: "Detection Accuracy", value: "92.5%" },
+          { label: "Recognition Speed", value: "30 FPS" },
+          { label: "Multi-object Tracking", value: "15 objects" }
+        ]
+      }
+    ],
+    challenges: [
+      "Real-time processing of high-dimensional sensor data",
+      "Robust performance in varying lighting conditions",
+      "Adaptation to dynamic and unknown environments",
+      "Ensuring safety in human-robot interaction scenarios",
+      "Power consumption optimization for mobile robots"
+    ],
+    futureWork: [
+      "Integration with 5G and edge computing for enhanced capabilities",
+      "Advanced AI for more sophisticated decision making",
+      "Swarm robotics and multi-robot coordination",
+      "Quantum computing applications in robot vision",
+      "Bio-inspired vision systems and algorithms"
+    ],
+    relatedProjects: [
+      "Computer Vision and Image Processing",
+      "Machine Learning Applications",
+      "Autonomous Vehicle Systems",
+      "Human-Computer Interaction"
+    ],
+    datasets: [
+      "Robot Navigation Dataset (RND): 10,000+ navigation scenarios",
+      "Object Detection Dataset (ODD): 50,000+ labeled objects",
+      "Human-Robot Interaction Dataset (HRID): 5,000+ interaction sessions",
+      "SLAM Benchmark Dataset (SBD): 1,000+ mapping scenarios"
+    ],
+    algorithms: [
+      "Visual SLAM (vSLAM): Simultaneous localization and mapping",
+      "Deep Object Detection (DOD): YOLO-based object recognition",
+      "Path Planning Algorithm (PPA): A* and RRT* navigation",
+      "Human-Robot Interaction (HRI): Gesture and speech recognition"
+    ],
+    experimentalSetup: {
+      hardware: [
+        "TurtleBot3 mobile robot platform",
+        "Intel RealSense depth cameras",
+        "Velodyne VLP-16 LiDAR sensor",
+        "NVIDIA Jetson AGX Xavier for edge computing"
+      ],
+      software: [
+        "ROS Noetic for robot control",
+        "OpenCV 4.5+ for computer vision",
+        "PyTorch 1.12+ for deep learning",
+        "Gazebo 11 for simulation"
+      ]
+    },
+    evaluationMetrics: {
+      classification: [
+        "Object Detection Accuracy: 92.5%",
+        "Navigation Success Rate: 96.8%",
+        "Human Recognition Rate: 89.3%",
+        "Path Planning Efficiency: 95.2%"
+      ],
+      performance: [
+        "Real-time Processing: 30 FPS",
+        "System Response Time: <100ms",
+        "Battery Life: 4-6 hours",
+        "Operating Range: 50m radius"
+      ]
+    }
+  },
+  {
+    id: 4,
+    title: "Wifi Sensing and Perception",
+    description:
+      "Developing wifi sensing and perception systems for smart homes and buildings to improve energy efficiency and reduce energy consumption.",
+    fullDescription:
+      "Our Wifi Sensing and Perception research focuses on developing wifi sensing and perception systems for smart homes and buildings to improve energy efficiency and reduce energy consumption.",
+    objectives: [
+      "Develop wifi sensing and perception systems for smart homes and buildings to improve energy efficiency and reduce energy consumption",
+      "Develop wifi sensing and perception systems for smart homes and buildings to improve energy efficiency and reduce energy consumption",
+    ],
+    methodology:
+      "We combine machine learning, IoT sensors, and building automation systems to create comprehensive energy management solutions. Our approach includes: 1) Data collection from smart meters and environmental sensors, 2) Machine learning models for demand prediction and optimization, 3) Real-time control algorithms for HVAC and lighting systems, 4) User behavior analysis and adaptive learning, 5) Integration with smart grid technologies.",
+    keyFeatures: [
+      "Real-time wifi sensing and perception",
+      "Predictive demand forecasting",
+      "Automated wifi sensing and perception",
+      "Renewable energy integration",
+      "User behavior learning and adaptation",
+      "Mobile and web-based wifi sensing and perception",
+    ],
+    applications: [
+      "Smart homes and residential buildings to improve energy efficiency and reduce energy consumption",
+      "Commercial office buildings to improve energy efficiency and reduce energy consumption",
+      "Industrial facilities to improve energy efficiency and reduce energy consumption",
+      "Educational institutions to improve energy efficiency and reduce energy consumption",
+      "Healthcare facilities to improve energy efficiency and reduce energy consumption",
+      "Retail and shopping centers to improve energy efficiency and reduce energy consumption",
+    ],
+    technologies: [
+      "Machine Learning (TensorFlow, PyTorch)",
+      "IoT platforms (Arduino, Raspberry Pi)",
+      "Building automation protocols (BACnet, Modbus)",
+      "Cloud computing (AWS IoT, Azure IoT)",
+      "Mobile development (React Native, Flutter)",
+      "Database systems (InfluxDB, MongoDB)",
+    ],
+    publications: [
+      "Intelligent Energy Management for Smart Buildings",
+      "Machine Learning Approaches to HVAC Optimization",
+      "Renewable Energy Integration in Smart Grids",
+      "User Behavior Modeling for Energy Efficiency",
+    ],
+    teamMembers: [
+      "Prof. Chih-Yang Lin (Director)",
+      "Chen, Yi En (MS Student)",
+      "Lin, Wei Jie (MS Student)",
+    ],
+    status: "ongoing",
+    startDate: "2021-06-01",
+    funding: "Ministry of Science and Technology, Taiwan",
+    images: [
+      "/images/research/energy-management-1.jpg",
+      "/images/research/smart-building-1.jpg",
+    ],
+    results: [
+      {
+        title: "Energy Savings",
+        description:
+          "Significant reduction in energy consumption across various building types.",
+        metrics: [
+          { label: "Average Energy Savings", value: "25.3%" },
+          { label: "Peak Demand Reduction", value: "18.7%" },
+          { label: "Cost Savings", value: "22.1%" },
+        ],
+      },
+    ],
+    challenges: [
+      "Integrating diverse building systems and protocols",
+      "Ensuring user comfort while optimizing energy use",
+      "Handling varying weather conditions and seasonal changes",
+      "Managing data privacy and security in IoT systems",
+    ],
+    futureWork: [
+      "Integration with electric vehicle charging systems",
+      "Advanced grid interaction and demand response",
+      "Machine learning for predictive maintenance",
+      "Blockchain-based energy trading systems",
+    ],
+    relatedProjects: [
+      "Smart Building Automation",
+      "Renewable Energy Integration",
+      "IoT Sensor Networks",
+    ],
+  },
+  {
+    id: 4,
+    title: "WiFi Sensing and Perception",
+    description:
+      "Developing wifi sensing and perception systems for smart homes and buildings to improve energy efficiency and reduce energy consumption.",
+    fullDescription:
+      "Our WiFi Sensing and Perception research focuses on developing innovative wireless sensing technologies that leverage existing WiFi infrastructure for smart home and building applications. We explore how WiFi signals can be used for human activity recognition, occupancy detection, gesture recognition, and environmental monitoring without requiring additional hardware installations.",
+    objectives: [
+      "Develop WiFi-based human activity recognition and gesture detection systems",
+      "Create occupancy detection and tracking solutions for smart buildings",
+      "Implement environmental monitoring using WiFi signal analysis",
+      "Design privacy-preserving wireless sensing algorithms",
+      "Build energy-efficient smart home automation systems"
+    ],
+    methodology:
+      "We employ advanced signal processing, machine learning, and wireless communication techniques. Our methodology includes: 1) WiFi signal analysis and feature extraction, 2) Machine learning models for activity recognition, 3) Privacy-preserving data processing techniques, 4) Real-time signal processing and classification, 5) Integration with smart home IoT systems. Our research framework consists of four main phases: Signal Acquisition and Preprocessing, Feature Extraction and Analysis, Machine Learning Model Development, and Real-time Implementation and Validation. We use Channel State Information (CSI) and Received Signal Strength Indicator (RSSI) data from WiFi signals to detect human activities, gestures, and environmental changes without requiring additional hardware installations.",
+    keyFeatures: [
+      "WiFi-based human activity recognition",
+      "Gesture detection and tracking",
+      "Occupancy detection and counting",
+      "Environmental monitoring (temperature, humidity, air quality)",
+      "Privacy-preserving sensing algorithms",
+      "Real-time signal processing and classification"
+    ],
+    applications: [
+      "Smart home automation and control",
+      "Elderly care and health monitoring",
+      "Energy management in buildings",
+      "Security and surveillance systems",
+      "Human-computer interaction",
+      "Environmental monitoring and control"
+    ],
+    technologies: [
+      "WiFi signal processing (CSI, RSSI analysis)",
+      "Machine Learning (TensorFlow, PyTorch)",
+      "Signal processing libraries (SciPy, NumPy)",
+      "IoT platforms (Arduino, Raspberry Pi)",
+      "Wireless communication protocols",
+      "Real-time data processing systems"
+    ],
+    publications: [
+      "WiFi-based Human Activity Recognition using Deep Learning",
+      "Privacy-Preserving Gesture Detection in Smart Homes",
+      "Occupancy Detection using WiFi Signal Analysis",
+      "Environmental Monitoring with Wireless Sensing"
+    ],
+    teamMembers: [
+      "Prof. Chih-Yang Lin (Director)",
+      "Chen, Yi En (MS Student)",
+      "Lin, Wei Jie (MS Student)"
+    ],
+    status: "ongoing",
+    startDate: "2022-01-01",
+    funding: "Ministry of Science and Technology, Taiwan",
+    images: [
+      "/images/research/wifi-sensing-1.jpg",
+      "/images/research/smart-home-1.jpg"
+    ],
+    results: [
+      {
+        title: "Activity Recognition Performance",
+        description: "High accuracy in recognizing human activities using WiFi signals.",
+        metrics: [
+          { label: "Activity Recognition Accuracy", value: "92.4%" },
+          { label: "Gesture Detection Rate", value: "88.7%" },
+          { label: "Occupancy Detection Accuracy", value: "95.1%" }
+        ]
+      },
+      {
+        title: "Privacy and Security",
+        description: "Privacy-preserving algorithms for wireless sensing applications.",
+        metrics: [
+          { label: "Data Privacy Level", value: "98.3%" },
+          { label: "Signal Processing Speed", value: "Real-time" },
+          { label: "False Positive Rate", value: "3.2%" }
+        ]
+      }
+    ],
+    challenges: [
+      "Handling signal interference and noise in WiFi environments",
+      "Ensuring privacy while maintaining sensing accuracy",
+      "Real-time processing of high-frequency WiFi signals",
+      "Adapting to different building layouts and environments",
+      "Battery life optimization for mobile sensing devices"
+    ],
+    futureWork: [
+      "Integration with 5G and next-generation wireless technologies",
+      "Advanced machine learning for improved accuracy",
+      "Multi-modal sensing combining WiFi with other sensors",
+      "Edge computing for real-time processing",
+      "Standardization of WiFi sensing protocols"
+    ],
+    relatedProjects: [
+      "Smart Building Automation",
+      "IoT Sensor Networks",
+      "Human-Computer Interaction",
+      "Privacy-Preserving Technologies"
+    ],
+    datasets: [
+      "WiFi Activity Recognition Dataset (WAR-D): 10,000+ activity samples",
+      "Gesture Recognition Dataset (GRD): 5,000+ gesture samples",
+      "Occupancy Detection Dataset (ODD): 2,000+ occupancy events",
+      "Environmental Monitoring Dataset (EMD): 1,000+ environmental changes"
+    ],
+    algorithms: [
+      "CSI-based Activity Recognition (CAR): Deep learning for activity classification",
+      "WiFi Gesture Detection (WGD): CNN-based gesture recognition",
+      "Occupancy Detection Algorithm (ODA): Real-time occupancy tracking",
+      "Environmental Monitoring System (EMS): Multi-sensor data fusion"
+    ],
+    experimentalSetup: {
+      hardware: [
+        "Intel 5300 WiFi cards for CSI data collection",
+        "Raspberry Pi 4 for edge computing",
+        "Multiple WiFi access points (802.11n/ac)",
+        "Environmental sensors for ground truth validation"
+      ],
+      software: [
+        "MATLAB for signal processing",
+        "Python with TensorFlow/PyTorch for ML models",
+        "Linux-based embedded systems",
+        "Real-time data processing pipelines"
+      ]
+    },
+    evaluationMetrics: {
+      classification: [
+        "Activity Recognition Accuracy: 92.4%",
+        "Gesture Detection Rate: 88.7%",
+        "Occupancy Detection Accuracy: 95.1%",
+        "Environmental Change Detection: 89.3%"
+      ],
+      performance: [
+        "Real-time Processing: <100ms latency",
+        "Privacy Level: 98.3% data privacy",
+        "False Positive Rate: 3.2%",
+        "System Reliability: 99.1%"
+      ]
+    }
+  }
 ];

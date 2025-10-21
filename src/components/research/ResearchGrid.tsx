@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ResearchArea } from "@/types/types";
 
 type ResearchGridProps = {
@@ -74,7 +75,7 @@ export default function ResearchGrid({ researchAreas }: ResearchGridProps) {
             {/* Link */}
             {research.link && (
               <div className="mt-6 pt-4 border-t border-white/20">
-                <a
+                <Link
                   href={research.link}
                   className="text-cyan-400 font-medium hover:text-cyan-300 transition-colors flex items-center group/link"
                 >
@@ -91,7 +92,7 @@ export default function ResearchGrid({ researchAreas }: ResearchGridProps) {
                       clipRule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             )}
           </div>

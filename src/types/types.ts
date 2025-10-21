@@ -62,3 +62,40 @@ export type Achievement = {
   citations?: string;
   link?: string;
 };
+
+export type ResearchDetail = {
+  id: number;
+  title: string;
+  description: string;
+  fullDescription: string;
+  objectives: string[];
+  methodology: string;
+  keyFeatures: string[];
+  applications: string[];
+  technologies: string[];
+  publications: string[];
+  teamMembers: string[];
+  status: "ongoing" | "completed" | "upcoming";
+  startDate: string;
+  endDate?: string;
+  funding?: string;
+  images: string[];
+  results?: {
+    title: string;
+    description: string;
+    metrics: { label: string; value: string }[];
+  }[];
+  challenges?: string[];
+  futureWork?: string[];
+  relatedProjects?: string[];
+  datasets?: string[];
+  algorithms?: string[];
+  experimentalSetup?: {
+    hardware: string[];
+    software: string[];
+  };
+  evaluationMetrics?: {
+    classification: string[];
+    performance: string[];
+  };
+};
